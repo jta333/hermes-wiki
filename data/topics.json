@@ -5,5 +5,7 @@
   {"name": "JET Business", "count": 1, "dates": ["2026-06-01"]},
   {"name": "Google Chat", "count": 1, "dates": ["2026-06-01"]},
   {"name": "Calendar", "count": 1, "dates": ["2026-06-01"]},
-  {"name": "Chat", "count": 1, "dates": ["2026-06-01"]}
+  {"name": "Windows", "count": 1, "dates": ["2026-06-01"]},
+  {"name": "Cost Management", "count": 1, "dates": ["2026-06-01"]},
+  {"name": "Microsoft Office", "count": 1, "dates": ["2026-06-01"]}
 ]

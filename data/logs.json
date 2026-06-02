@@ -1,29 +1,42 @@
 [
   {
     "date": "2026-06-01",
-    "title": "Google Chat Setup + Email Triage System",
-    "summary": "Established Google Chat as the primary Hermes interface via Cloud Pub/Sub integration and built a comprehensive email archive routine that moved 156 emails into organized label folders. Developed multiple automation crons for daily check-ins, hot list tracking, production meeting prep, and Plaud audio file auto-filing, then set up this memory wiki with a morning priority cron.",
-    "topics": ["Tech Setup", "Email", "JET Business", "Automation", "Google Chat", "Calendar", "Chat"],
+    "title": "Full Hermes Stack Build-Out",
+    "summary": "Launched Hermes from scratch: connected Google Chat via Pub/Sub, built email archive/triage automation, and set up the memory wiki with cron jobs. Afternoon sessions tackled cost control (switched Opus→Sonnet after $25 burned, set $50 cap), attempted Microsoft 365 install (hit C2R errors, ran registry resets), and hardened Homedrums with never-sleep settings and auto-login so the PC survives power loss without blocking the gateway.",
+    "topics": ["Tech Setup", "Email", "JET Business", "Automation", "Google Chat", "Windows", "Cost Management", "Microsoft Office"],
     "work_done": [
       "Connected Google Chat to Hermes via Pub/Sub",
       "Built email archive routine — 156 emails moved to label folders",
-      "Audited Claude Code email triage labels",
-      "Built check-in skill, hot list, production meeting prep, Plaud auto-filer crons",
+      "Audited and set up Claude Code email triage labels",
+      "Built jet-checkin skill, hot list, production meeting prep, Plaud auto-filer, and morning priority crons",
       "Created _Hermes Drive folder and Jay hot list doc",
-      "Renamed 14 production meeting transcripts to new convention",
-      "Set up memory wiki + morning priority cron"
+      "Renamed 14 production meeting transcripts to new naming convention",
+      "Set up memory wiki (jta333.github.io/hermes-wiki) + daily wiki update cron",
+      "Switched default model Opus→Sonnet; created /model opus and /model sonnet per-thread aliases",
+      "Set OpenRouter spending cap to $50",
+      "Attempted Microsoft 365 install via winget — hit exit code 4294967295, ran office_regreset.ps1 to clear ghost registry entries",
+      "Configured Homedrums to never sleep (power plan + display settings)",
+      "Set up Windows auto-login (local account Jay, empty password) via autologin_setup.ps1 — disables passwordless-only mode, sets AutoAdminLogon",
+      "Created skills: hermes-model-cost-management, windows-always-on-host, windows-app-install, jet-personal-assistant, jet-email-triage, google-workspace, jet-checkin, hermes-google-chat-gateway",
+      "Check-in cron extended to 3x daily (7am, 12pm, 3:50pm)"
     ],
     "key_decisions": [
       "Hot list lives in Google Doc in _Hermes Drive folder",
-      "Wiki hosted on GitHub Pages",
-      "Check-in runs 3x daily on Haiku 4.5, meeting prep on Sonnet 4.6"
+      "Wiki hosted on GitHub Pages (jta333.github.io/hermes-wiki)",
+      "Default model is Sonnet 4.6 (cost-conscious); Opus only on demand via /model opus",
+      "OpenRouter spending cap set at $50",
+      "Check-in runs 3x daily on Haiku 4.5; production meeting prep on Sonnet 4.6",
+      "Homedrums auto-login configured so gateway survives reboots without a PIN prompt"
     ],
     "open_items": [
+      "Microsoft 365 install incomplete — C2R installer failed, registry cleared but install not confirmed complete",
       "Claude Code email triage corrections still pending",
       "Rocio Mahoney event contract — needs Jay review",
       "Boehme $700 invoice — unpaid",
       "LVCC COI expired — needs resubmission",
-      "GA DOL employer status report — needs filing"
+      "GA DOL employer status report — needs filing",
+      "Tailscale: key expiry off, MagicDNS, subnet routes still pending",
+      "StudioPro SSH still pending setup"
     ]
   }
 ]
