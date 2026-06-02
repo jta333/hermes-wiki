@@ -1,0 +1,29 @@
+[
+  {
+    "date": "2026-06-01",
+    "title": "Google Chat Setup + Email Triage System",
+    "summary": "Established Google Chat as the primary Hermes interface via Cloud Pub/Sub integration and built a comprehensive email archive routine that moved 156 emails into organized label folders. Developed multiple automation crons for daily check-ins, hot list tracking, production meeting prep, and Plaud audio file auto-filing, then set up this memory wiki with a morning priority cron.",
+    "topics": ["Tech Setup", "Email", "JET Business", "Automation", "Google Chat", "Calendar", "Chat"],
+    "work_done": [
+      "Connected Google Chat to Hermes via Pub/Sub",
+      "Built email archive routine — 156 emails moved to label folders",
+      "Audited Claude Code email triage labels",
+      "Built check-in skill, hot list, production meeting prep, Plaud auto-filer crons",
+      "Created _Hermes Drive folder and Jay hot list doc",
+      "Renamed 14 production meeting transcripts to new convention",
+      "Set up memory wiki + morning priority cron"
+    ],
+    "key_decisions": [
+      "Hot list lives in Google Doc in _Hermes Drive folder",
+      "Wiki hosted on GitHub Pages",
+      "Check-in runs 3x daily on Haiku 4.5, meeting prep on Sonnet 4.6"
+    ],
+    "open_items": [
+      "Claude Code email triage corrections still pending",
+      "Rocio Mahoney event contract — needs Jay review",
+      "Boehme $700 invoice — unpaid",
+      "LVCC COI expired — needs resubmission",
+      "GA DOL employer status report — needs filing"
+    ]
+  }
+]
