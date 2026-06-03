@@ -1,11 +1,15 @@
 [
-  {"name": "Tech Setup", "count": 1, "dates": ["2026-06-01"]},
+  {"name": "Tech Setup", "count": 2, "dates": ["2026-06-01", "2026-06-02"]},
   {"name": "Email", "count": 1, "dates": ["2026-06-01"]},
-  {"name": "Automation", "count": 1, "dates": ["2026-06-01"]},
-  {"name": "JET Business", "count": 1, "dates": ["2026-06-01"]},
+  {"name": "Automation", "count": 2, "dates": ["2026-06-01", "2026-06-02"]},
+  {"name": "JET Business", "count": 2, "dates": ["2026-06-01", "2026-06-02"]},
   {"name": "Google Chat", "count": 1, "dates": ["2026-06-01"]},
   {"name": "Calendar", "count": 1, "dates": ["2026-06-01"]},
   {"name": "Windows", "count": 1, "dates": ["2026-06-01"]},
   {"name": "Cost Management", "count": 1, "dates": ["2026-06-01"]},
-  {"name": "Microsoft Office", "count": 1, "dates": ["2026-06-01"]}
+  {"name": "Microsoft Office", "count": 1, "dates": ["2026-06-01"]},
+  {"name": "Tailscale", "count": 1, "dates": ["2026-06-02"]},
+  {"name": "QuickBooks", "count": 1, "dates": ["2026-06-02"]},
+  {"name": "Skills", "count": 1, "dates": ["2026-06-02"]},
+  {"name": "Reminders", "count": 1, "dates": ["2026-06-02"]}
 ]

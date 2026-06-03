@@ -38,5 +38,44 @@
       "Tailscale: key expiry off, MagicDNS, subnet routes still pending",
       "StudioPro SSH still pending setup"
     ]
+  },
+  {
+    "date": "2026-06-02",
+    "title": "Tailscale, Skills & QB Invoice Audit",
+    "summary": "Second full day of Hermes operation. Tailscale VPN mesh went fully live across all Jay's devices (Homedrums, Aura, StudioPro, Galaxy Fold 7, Synology NAS). New skills built for Android integrations, voice style guide, QB invoice design, and a Tailscale devops skill. Four new cron jobs created covering upcoming reminders and a daily QuickBooks invoice cleanup tracker. All automated crons ran successfully throughout the day.",
+    "topics": ["Tailscale", "Tech Setup", "JET Business", "QuickBooks", "Automation", "Skills", "Reminders"],
+    "work_done": [
+      "Tailscale mesh VPN confirmed live on all devices: Homedrums (100.100.54.91), Aura (100.105.21.92), StudioPro (100.75.154.98), Galaxy Fold 7 (100.88.65.64), Synology NAS (100.99.185.57)",
+      "Created tailscale devops skill with full reference table, Windows binary path notes, and common commands",
+      "Created jay-android-integrations skill documenting what Hermes can/can't access on Galaxy Fold 7; confirmed ntfy.sh push live with JSON format fix",
+      "Created jay-voice skill v2.0 — full 12-register style guide for writing in Jay's voice",
+      "Created jet-invoice-design skill — QB template audit (identified 7 dead giveaways it's QuickBooks) and prioritized fix list",
+      "Updated jet-personal-assistant skill with staff contacts, follow-up tracking, timezone/location rules for cron reminders, and QB invoice cleanup checklist",
+      "Updated google-workspace skill and ocr-and-documents skill",
+      "Set new cron: Reminder — Estimate categorization + P&L training with Cati (Wed June 3, 9am)",
+      "Set new cron: Thu backup reminder — Estimate categorization + P&L training with Cati (Thu June 4, 9am)",
+      "Set new cron: AI for Founders meeting prep reminder (Thu June 4, 8am)",
+      "Set new cron: QB Invoice Cleanup Daily Reminder (10am daily) — tracks 7 open QB settings/design fixes",
+      "All automated crons ran successfully throughout day: 3x check-ins, production meeting prep, Plaud filer, client email watch (every 20min), PO approval watch",
+      "Jay traveling in NYC (returns to Las Vegas Sunday June 8)"
+    ],
+    "key_decisions": [
+      "Tailscale confirmed as the VPN mesh for all device access — no port forwarding, all on same tailnet",
+      "Jay Voice skill v2.0 created as the canonical writing style guide — must be loaded before writing anything as Jay",
+      "QB invoice redesign broken into Easy/Medium/Hard tiers; daily reminder cron set to track progress",
+      "Cron reminder timezone rule established: default to 10am PT (safe for both PT and ET) when Jay is traveling",
+      "Jay returns from NYC June 8 — review any ET-based crons before then"
+    ],
+    "open_items": [
+      "QB invoice cleanup — 7 items pending (T taxable flags, Sales Rep label, US in address, SHIP TO label, JET logo on page 2, BALANCE DUE restyling, invoice number relabeling)",
+      "Estimate categorization + P&L training with Cati — reminder set for June 3",
+      "AI for Founders meeting — reminder set for June 4 8am",
+      "Edge Factory / Webflow — updated estimate + renderings sent; Ross Reyes out June 3–12",
+      "Valerie Kalemba / Westpac Wealth — health insurance BOR letter, 12+ days outstanding",
+      "Jude Barry / Pluma — call June 3 10:30am PT confirmed",
+      "PowerFlex PO — waiting on Alan to clarify sell price",
+      "Microsoft 365 install still incomplete from June 1",
+      "Jay returns to Las Vegas June 8 — review ET-based crons before then"
+    ]
   }
 ]
