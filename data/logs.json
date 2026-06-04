@@ -77,5 +77,52 @@
       "Microsoft 365 install still incomplete from June 1",
       "Jay returns to Las Vegas June 8 — review ET-based crons before then"
     ]
+  },
+  {
+    "date": "2026-06-03",
+    "title": "Invoice Design, Email Triage & Insurance",
+    "summary": "Active Wednesday session: production meeting prep ran successfully and flagged FBLA (June 5–8) as imminent and JET insurance policies as expired that morning. Jay worked on invoice design direction in Google Chat — settled on a monochrome, law-firm-level aesthetic (black/white/gray only) after rejecting colorful drafts. New LLM-powered email triage cron jobs were built and scheduled (2x daily Haiku 4.5 passes). Skills updated for email triage taxonomy, invoice design, brand assets, insurance policies, and jay-voice style guide. Two cron failures surfaced: Client Email Watch and PO Approval Watch both broken due to invalid deepseek model ID.",
+    "topics": ["Email Triage", "Invoice Design", "Insurance", "JET Business", "Automation", "Skills", "Cron Jobs"],
+    "work_done": [
+      "Production meeting prep cron ran at 7am — created doc '2026.06.03 FBLA-IPMI-MondaySOP' in Drive, flagged 8 urgent/action items including insurance expiry and FBLA in 2 days",
+      "Morning Priority check-in delivered calendar briefing: 4 events on Jay's calendar including Pluma call and production meeting",
+      "3x JET check-ins ran successfully (7am, 12pm, 3:50pm) — surfaced Akur8 contract countersignature needed, Monday.com webhook broken, insurance expiry",
+      "Con Edison cancel reminder delivered at 6am (close account eff June 8)",
+      "Cati P&L / estimate categorization reminder delivered at 9am",
+      "QB Invoice Cleanup reminder delivered at 10am with 7-item checklist",
+      "Cancel Con Edison eff June 7 reminder created and delivered at 1pm",
+      "Created 2 new email triage cron jobs: 'JET Email Triage — LLM Reasoning Pass' (7am + 12pm) and '3:50pm' version — both on Haiku 4.5, full two-label rule with archive logic",
+      "Updated jet-email-triage skill (SKILL.md) with full LLM triage workflow",
+      "Created google-workspace reference file jet-gmail-label-taxonomy.md — complete label ID map and two-label triage rule",
+      "Updated jet-invoice-design skill with monochrome design direction settled June 3 (charcoal #4A4A4A header, white/gray body — McKinsey-level restraint)",
+      "Created jet-invoice-design reference: jet-brand-assets-june2026.md — full logo file Drive IDs and hex color palette",
+      "Created jet-invoice-design reference: jet-insurance-policies-june2026.md — all 4 expired Intact/Atlantic Specialty policies with numbers, premiums, and renewal status",
+      "Updated jet-personal-assistant skill with insurance policy detail, task list format preferences, Google Sheet day-planning option, and verify-before-flagging rule",
+      "Updated jay-voice style-tone-guide.md with observed email patterns",
+      "All Haiku-based check-in crons ran successfully; deepseek-based crons (Client Email Watch, PO Watch, Sent Email Observer) all failing with invalid model ID error"
+    ],
+    "key_decisions": [
+      "Invoice design direction: monochrome only (black/white/gray) — target aesthetic is top-tier law firm or architecture firm invoice; teal/gold/color rejected by Jay",
+      "New email triage approach: LLM Reasoning Pass cron (Haiku 4.5) does full two-label classification with archiving — runs 7am, 12pm, 3:50pm weekdays",
+      "Insurance expiry acknowledged: all 4 JET LLC policies expired June 3; Jay replied to Daniel Hayden same day with equipment list; waiting on Acrisure to return quotes",
+      "Verify-before-flagging rule added to jet-personal-assistant: always check sent mail before telling Jay something needs his attention",
+      "Task list format preference documented: numbered items, Jay can say '1 is done, push 2 to tomorrow'"
+    ],
+    "open_items": [
+      "JET LLC insurance renewal — all 4 policies expired June 3; waiting on Acrisure/Daniel Hayden to return quotes",
+      "Akur8 contract — countersignature needed from Jay via AdobeSign (Heide Sacher sent signed contract)",
+      "Monday.com webhook broken — automation disabled, board integrity at risk; needs re-config",
+      "deepseek/deepseek-chat-v4-flash model ID invalid on OpenRouter — Client Email Watch, PO Approval Watch, and Jay Voice Sent Email Observer all failing every run; model needs to be changed",
+      "FBLA event June 5–8 (Westgate) — Chelsea needs to confirm all logistics",
+      "Rocio Mahoney contract — 1+ day overdue per production meeting prep",
+      "PowerFlex IPMI (June 14–17) — Alan's proposal unanswered 7+ days, fabrication windows closing",
+      "Zendesk SKO — 19 days frozen; Jay may need to call directly",
+      "Adobe Summit overage — Cati blocked 7+ days waiting on Jay's approval",
+      "QB invoice cleanup — 7 items still pending",
+      "TaxJar sales tax returns due this month — 4 states, not enrolled in AutoFile",
+      "NV JET LLC biz license renewal due July 1 (28 days out)",
+      "Estimate categorization + P&L training with Cati — reminder fired today, unclear if completed",
+      "Jay returns to Las Vegas June 8 — review ET-based crons before then"
+    ]
   }
 ]
