@@ -1,19 +1,20 @@
 [
   {"name": "Tech Setup", "count": 2, "dates": ["2026-06-01", "2026-06-02"]},
   {"name": "Email", "count": 1, "dates": ["2026-06-01"]},
-  {"name": "Automation", "count": 3, "dates": ["2026-06-01", "2026-06-02", "2026-06-03"]},
-  {"name": "JET Business", "count": 3, "dates": ["2026-06-01", "2026-06-02", "2026-06-03"]},
+  {"name": "Automation", "count": 4, "dates": ["2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04"]},
+  {"name": "JET Business", "count": 4, "dates": ["2026-06-01", "2026-06-02", "2026-06-03", "2026-06-04"]},
   {"name": "Google Chat", "count": 1, "dates": ["2026-06-01"]},
   {"name": "Calendar", "count": 1, "dates": ["2026-06-01"]},
   {"name": "Windows", "count": 1, "dates": ["2026-06-01"]},
-  {"name": "Cost Management", "count": 1, "dates": ["2026-06-01"]},
+  {"name": "Cost Management", "count": 2, "dates": ["2026-06-01", "2026-06-04"]},
   {"name": "Microsoft Office", "count": 1, "dates": ["2026-06-01"]},
   {"name": "Tailscale", "count": 1, "dates": ["2026-06-02"]},
   {"name": "QuickBooks", "count": 1, "dates": ["2026-06-02"]},
   {"name": "Skills", "count": 2, "dates": ["2026-06-02", "2026-06-03"]},
   {"name": "Reminders", "count": 2, "dates": ["2026-06-02", "2026-06-03"]},
-  {"name": "Email Triage", "count": 1, "dates": ["2026-06-03"]},
+  {"name": "Email Triage", "count": 2, "dates": ["2026-06-03", "2026-06-04"]},
   {"name": "Invoice Design", "count": 1, "dates": ["2026-06-03"]},
   {"name": "Insurance", "count": 1, "dates": ["2026-06-03"]},
-  {"name": "Cron Jobs", "count": 1, "dates": ["2026-06-03"]}
+  {"name": "Cron Jobs", "count": 2, "dates": ["2026-06-03", "2026-06-04"]},
+  {"name": "New Business", "count": 1, "dates": ["2026-06-04"]}
 ]

@@ -124,5 +124,55 @@
       "Estimate categorization + P&L training with Cati — reminder fired today, unclear if completed",
       "Jay returns to Las Vegas June 8 — review ET-based crons before then"
     ]
+  },
+  {
+    "date": "2026-06-04",
+    "title": "Check-Ins, Triage & New Business Leads",
+    "summary": "Full autonomous operations day — no production meeting (silent exit). All three daily check-ins ran successfully surfacing new urgent items: ProtoGroup website proposal request, IPMI PowerFlex payment blockage (event June 14–15), World of Concrete 2027 inquiry from Reading Truck, and Atomic Design pricing discussion. Email triage ran 2x (12pm + 3:50pm), processing 44 total threads with dual-label classification. AI Cost Monitor logged a new $100 Anthropic charge, bringing June total to $762.81. AI for Founders reminder fired at 8am; Cati P&L backup reminder at 9am. All skills and crons running stable.",
+    "topics": ["JET Business", "Automation", "Email Triage", "Cron Jobs", "New Business", "Cost Management"],
+    "work_done": [
+      "Production Meeting Prep cron ran at 7am — no meeting on calendar, exited silently",
+      "AI for Founders meeting reminder delivered at 8am with Google Doc link",
+      "Cati estimate categorization/P&L backup reminder delivered at 9am",
+      "Morning Priority Check-In at 9am — surfaced 3 calendar items: ShopSabre CNC training task (10am), COI for Gloria/Pfau (10:30am), Pluma call with Jude Barry (3pm)",
+      "QB Invoice Cleanup reminder delivered at 10am — 7-item checklist still pending",
+      "JET Check-In at 7am — flagged: Atomic Design (Sally King) pricing inquiry, Quote #FR8252 (JET Event Rentals), Chelsea workflow approval needed, MCLO 2026 payment received ($11,488.98), Jenna Clarke approved for remote (possible pneumonia)",
+      "JET Check-In at 12pm — flagged: World of Concrete 2027 (Reading Truck/Emilly Heine, 30x40 booth, URGENT), Chelsea Re: New Vendor Onboarding, Pluma call confirmed by Jude at 9:28am",
+      "JET Email Triage (12pm run) — 30 threads labeled and archived; 1 label correction (WoC reassigned to Clients/Reading Truck); breakdown: 1 URGENT, 11 TODAY, 18 ROUTINE",
+      "JET Check-In at 3:50pm — flagged: ProtoGroup proposal meeting request (Fyez Irfan, website wireframes), IPMI PowerFlex payment hold-up (booth prep, Annie arriving 6/13), General Liability settlement routing issue",
+      "JET Email Triage (3:50pm run) — 14 threads processed; 8 TODAY-urgency (IPMI payment, ProtoGroup wireframes, 2x GL incidents, 3 COI requests, Estimate Builder testing)",
+      "AI Cost Monitor ran at 8pm — logged new Anthropic $100 charge (API credits top-up); June total updated to $762.81",
+      "@Hermes Sent Mail Watcher — no new @hermes mentions, silent",
+      "JET Lead Monitor (every 30m) — ran throughout day, silent (no new inbound leads detected)",
+      "Plaud Auto-Filer ran hourly — no new transcripts to file, silent all day",
+      "jet-email-triage SKILL.md updated (Jun 4 08:58)",
+      "google-workspace SKILL.md updated (Jun 4 08:57)",
+      "USER.md memories updated with latest Jay profile notes"
+    ],
+    "key_decisions": [
+      "No production meeting today (Thursday) — cron correctly exited silently",
+      "World of Concrete 2027 (Reading Truck) flagged as URGENT in triage — 30x40 booth for January 2027 needs planning kickoff",
+      "IPMI Parking & Mobility Expo payment issue escalated — Annie Gala (PowerFlex) offering AMEX if AP/ACH routing fails; event is June 14–15",
+      "ProtoGroup website proposal elevated to TODAY priority — Fyez Irfan requesting meeting for next week + wireframe review",
+      "AI spend tracking active: June 2026 running total $762.81 (+ Google Cloud TBD)"
+    ],
+    "open_items": [
+      "IPMI Parking & Mobility Expo — PowerFlex payment hold-up; materials must arrive by Fri 6/14; Annie Gala on-site Sat 6/13",
+      "ProtoGroup (Fyez Irfan) — Website proposal meeting requested for next week; wireframe review pending",
+      "World of Concrete 2027 — Reading Truck (Emilly Heine) 30x40 booth inquiry; planning kickoff needed",
+      "General Liability settlement — Annie Gala/Alan open charge routing via AP/ACH or AMEX",
+      "Atomic Design (Sally King) — pricing + warehouse sample drop-off discussion pending",
+      "Quote #FR8252 — JET Event Rentals (Shannon), Global Coffee Table inquiry awaiting follow-up",
+      "Chelsea workflow approval — sign-off on new process she's drafting",
+      "Hertz driver's license expired — update before next trip booking",
+      "Send Gloria COI for new insurance policy (Acrisure/Pfau) — was on today's calendar",
+      "ShopSabre CNC training — schedule and pay; Plaud/GoPro reminder set for June 8",
+      "JET LLC insurance renewal — all 4 policies expired June 3; Acrisure quotes still pending",
+      "Akur8 contract countersignature — AdobeSign link still outstanding",
+      "Monday.com webhook broken — needs re-config",
+      "QB invoice cleanup — 7 items still pending",
+      "deepseek model ID fix still needed for Client Email Watch, PO Approval Watch, Sent Email Observer",
+      "Jay returns to Las Vegas June 8 — review ET-based crons; Plaud CNC reminder fires June 8 9:30am PT"
+    ]
   }
 ]
