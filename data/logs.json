@@ -75,7 +75,7 @@
       "Jude Barry / Pluma — call June 3 10:30am PT confirmed",
       "PowerFlex PO — waiting on Alan to clarify sell price",
       "Microsoft 365 install still incomplete from June 1",
-      "Jay returns to Las Vegas June 8 — review ET-based crons before then"
+      "Jay returns to Las Vegas June 8 — review ET-based crons; Plaud CNC reminder fires June 8 9:30am PT"
     ]
   },
   {
@@ -173,6 +173,53 @@
       "QB invoice cleanup — 7 items still pending",
       "deepseek model ID fix still needed for Client Email Watch, PO Approval Watch, Sent Email Observer",
       "Jay returns to Las Vegas June 8 — review ET-based crons; Plaud CNC reminder fires June 8 9:30am PT"
+    ]
+  },
+  {
+    "date": "2026-06-05",
+    "title": "FBLA Day, NY Move & Autonomous Ops",
+    "summary": "Friday autonomous operations day — Jay in NYC handling movers (Hudson 36 move-out 9am) while FBLA conference started at Westgate Las Vegas. Production meeting skipped (not on calendar). 3x check-ins and 3x email triage passes ran successfully. Cati replied to the estimate categorization thread with a heartfelt acknowledgment. New items surfaced: Form 5500 ADP compliance deadline (July 14), GitHub token expiry for jet-estimate-builder-bolt (1-day warning), EdgeFactory JumpStart follow-up, and Edward Jones financial wellness program inquiry. AI Cost Monitor logged a new OpenRouter charge, bringing June total to $789.30. deepseek-based crons (Client Email Watch, PO Approval Watch, Sent Email Observer) continued failing all day — 46 failed runs logged.",
+    "topics": ["JET Business", "Automation", "Email Triage", "Cron Jobs", "Cost Management", "Compliance"],
+    "work_done": [
+      "Production Meeting Prep cron ran at 7am — no production meeting on calendar (FBLA, Movers, Warehouse AC only); exited silently",
+      "Morning Priority Check-In at 9am — surfaced movers arrival 9–10am and J&T commission invoice payroll task at 11am",
+      "JET Check-In at 7am — flagged: Royal Plywood invoice, Form 5500 ADP compliance deadline (July 14), GitHub token expiry for jet-estimate-builder-bolt (1 day), COI open outbound to Cati, Con Edison power cancel confirmation to T. Palmer",
+      "JET Check-In at 12pm — flagged: EdgeFactory JumpStart Follow-up (Michelle Culpepper), Reading Truck QB invoice #256311 ($2,575.49 due 7/1), movers completed, NeoCon 2026 starts June 8, Jay returning June 8",
+      "JET Check-In at 3:50pm — flagged: Aaron Pressman (EdgeFactory) JumpStart reply needs action, Chelsea Leadership Action Plan (Days 31-60), new vendor onboarding process confirmations from Aleksandra and Jenna",
+      "JET Email Triage 7am pass — 50 threads scanned; 35 labeled + archived; breakdown: 15 __Today, 20 _Routine; key: 6 PowerFlex/IPMI emails flagged __Today, Form 5500 compliance flagged",
+      "JET Email Triage 12pm pass — inbox cleared completely; 28 threads triaged: 2 client (EdgeFactory JumpStart, Reading Truck WoC), 5 JET Business (__Today), 16 personal/admin (_Routine), 18 promo archived without labels",
+      "JET Email Triage 3:50pm pass — 22 threads triaged; new clients surfaced: Digital Owl (LTL freight), Insurity (ITC 2026 booth), Edge Factory (Webflow + JumpStart), PowerFlex (IPMI); 8 __Today, 14 _Routine",
+      "Cati Watch cron delivered Cati's reply at 12:25am — she responded to estimate categorization thread with professional acknowledgment; watched cron ran 38 times during the day",
+      "QB Invoice Cleanup reminder delivered at 10am — 7-item checklist still pending",
+      "AI Cost Monitor at 12pm — logged new OpenRouter charge $26.49; June running total updated to $789.30",
+      "AI Cost Monitor at 8pm — no new charges; silent exit",
+      "deepseek/deepseek-chat-v4-flash invalid model error continued all day — 43 failed Client Email Watch runs + 3 failed PO Approval Watch runs (46 total errors)",
+      "USER.md memories updated (Jay's no-tilde keyboard, URL formatting rules, email sign-off rule confirmed)"
+    ],
+    "key_decisions": [
+      "No production meeting Friday June 5 — correct silent exit",
+      "Jay out of office auto-reply active (returning June 8) — Chelsea Blake handling escalations",
+      "Form 5500 ADP compliance deadline July 14 surfaced as new item — needs Jay action",
+      "GitHub token for jet-estimate-builder-bolt expiring June 6 — needs renewal",
+      "deepseek model ID issue still unresolved — 46 failed cron runs today; fix needed before Monday"
+    ],
+    "open_items": [
+      "deepseek/deepseek-chat-v4-flash model ID fix URGENT — Client Email Watch, PO Approval Watch, Sent Email Observer all failing; 46 failed runs June 5 alone",
+      "GitHub token — jet-estimate-builder-bolt expires June 6 (flagged 1-day warning June 5)",
+      "Form 5500 ADP compliance — due July 14, 2026; Jay action required",
+      "EdgeFactory (Aaron Pressman) — JumpStart Follow-up needs response",
+      "Digital Owl — LTL freight coordination via AIT Worldwide Logistics; invoice adjustments in progress",
+      "Insurity — ITC 2026 booth planning; meeting scheduled June 10",
+      "IPMI Parking & Mobility Expo — PowerFlex payment still unresolved; Annie Gala on-site June 13, event June 14–15",
+      "World of Concrete 2027 — Reading Truck 30x40 booth; planning kickoff still needed",
+      "ProtoGroup (Fyez Irfan) — website proposal meeting still pending",
+      "QB invoice cleanup — 7 items still pending",
+      "JET LLC insurance renewal — all 4 policies expired June 3; Acrisure quotes still pending",
+      "Akur8 contract countersignature — AdobeSign still outstanding",
+      "Monday.com webhook broken — needs re-config",
+      "Edward Jones Financial Wellness — launch call requested for JET LLC program",
+      "New Vendor Onboarding Process — team acknowledged; Chelsea's process rolling out",
+      "Jay returns Las Vegas June 8 — 3x CNC/Plaud reminders set for 7am, 9:30am, 12:30pm PT"
     ]
   }
 ]
