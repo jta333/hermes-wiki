@@ -1,5 +1,5 @@
-// Jay × Hermes Memory Wiki — app.js
-// Pure vanilla JS — no frameworks, works from file:// or HTTP
+// Jay × Hermes Memory Wiki: app.js
+// Pure vanilla JS, no frameworks, works from file:// or HTTP
 
 (function () {
   'use strict';

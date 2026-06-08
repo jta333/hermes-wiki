@@ -1,4 +1,4 @@
-# Jay × Hermes — Memory Wiki
+# Jay × Hermes: Memory Wiki
 
 A dark, minimal static wiki for tracking daily sessions, decisions, and open items between Jay Castellano and Hermes Agent.
 
@@ -9,7 +9,7 @@ hermes-wiki/
 ├── index.html          # Single-page app shell
 ├── assets/
 │   ├── style.css       # Dark theme (Linear/Notion aesthetic)
-│   └── app.js          # Vanilla JS app — reads data/
+│   └── app.js          # Vanilla JS app: reads data/
 ├── data/
 │   ├── logs.json       # Daily session logs
 │   ├── topics.json     # Topic index with counts
@@ -20,18 +20,18 @@ hermes-wiki/
 
 ## Features
 
-- **Recent Activity** — last 7 days of sessions at a glance
-- **Today view** — quick look at today's session, open items, and decisions
-- **Daily Logs** — full chronological archive, expandable cards
-- **Topics** — tag cloud with filtered session views
-- **Live search** — filters across all content in real time
-- **Mobile responsive** — sidebar on desktop, tabs on mobile
+- **Recent Activity**: last 7 days of sessions at a glance
+- **Today view**: quick look at today's session, open items, and decisions
+- **Daily Logs**: full chronological archive, expandable cards
+- **Topics**: tag cloud with filtered session views
+- **Live search**: filters across all content in real time
+- **Mobile responsive**: sidebar on desktop, tabs on mobile
 
 ## Design
 
 - Background: `#0d0d0d` | Cards: `#161616` | Accent: `#4f7fff`
 - Font: [Inter](https://rsms.me/inter/)
-- Zero dependencies — pure HTML/CSS/JS
+- Zero dependencies: pure HTML/CSS/JS
 
 ## Hosting
 
@@ -46,7 +46,7 @@ python -m http.server 8080
 
 ## Adding Logs
 
-Edit `data/logs.json` — append a new object at the start of the array:
+Edit `data/logs.json`, append a new object at the start of the array:
 
 ```json
 {
@@ -64,4 +64,4 @@ Also update `data/topics.json` counts and `data/meta.json` timestamps.
 
 ---
 
-*Maintained by Hermes Agent — last bootstrap: 2026-06-01*
+*Maintained by Hermes Agent, last bootstrap: 2026-06-01*
