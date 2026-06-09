@@ -2,7 +2,7 @@
   {
     "date": "2026-06-01",
     "title": "Full Hermes Stack Build-Out",
-    "summary": "Launched Hermes from scratch: connected Google Chat via Pub/Sub, built email archive/triage automation, and set up the memory wiki with cron jobs. Afternoon sessions tackled cost control (switched Opus→Sonnet after $25 burned, set $50 cap), attempted Microsoft 365 install (hit C2R errors, ran registry resets), and hardened Homedrums with never-sleep settings and auto-login so the PC survives power loss without blocking the gateway.",
+    "summary": "Launched Hermes from scratch: connected Google Chat via Pub/Sub, built email archive/triage automation, and set up the memory wiki with cron jobs. Afternoon sessions tackled cost control (switched Opus to Sonnet after $25 burned, set $50 cap), attempted Microsoft 365 install (hit C2R errors, ran registry resets), and hardened Homedrums with never-sleep settings and auto-login so the PC survives power loss without blocking the gateway.",
     "topics": [
       "Tech Setup",
       "Email",
@@ -16,17 +16,13 @@
     "work_done": [
       "Connected Google Chat to Hermes via Pub/Sub",
       "Built email archive routine: 156 emails moved to label folders",
-      "Audited and set up Claude Code email triage labels",
       "Built jet-checkin skill, hot list, production meeting prep, Plaud auto-filer, and morning priority crons",
-      "Created _Hermes Drive folder and Jay hot list doc",
-      "Renamed 14 production meeting transcripts to new naming convention",
       "Set up memory wiki (jta333.github.io/hermes-wiki) + daily wiki update cron",
-      "Switched default model Opus→Sonnet; created /model opus and /model sonnet per-thread aliases",
+      "Switched default model Opus to Sonnet; created /model opus and /model sonnet per-thread aliases",
       "Set OpenRouter spending cap to $50",
       "Attempted Microsoft 365 install via winget: hit exit code 4294967295, ran office_regreset.ps1 to clear ghost registry entries",
-      "Configured Homedrums to never sleep (power plan + display settings)",
-      "Set up Windows auto-login (local account Jay, empty password) via autologin_setup.ps1: disables passwordless-only mode, sets AutoAdminLogon",
-      "Created skills: hermes-model-cost-management, windows-always-on-host, windows-app-install, jet-personal-assistant, jet-email-triage, google-workspace, jet-checkin, hermes-google-chat-gateway",
+      "Configured Homedrums to never sleep and set up Windows auto-login (local account Jay, empty password)",
+      "Created skills: hermes-model-cost-management, windows-always-on-host, jet-personal-assistant, jet-email-triage, google-workspace, jet-checkin, hermes-google-chat-gateway",
       "Check-in cron extended to 3x daily (7am, 12pm, 3:50pm)"
     ],
     "key_decisions": [
@@ -34,14 +30,11 @@
       "Wiki hosted on GitHub Pages (jta333.github.io/hermes-wiki)",
       "Default model is Sonnet 4.6 (cost-conscious); Opus only on demand via /model opus",
       "OpenRouter spending cap set at $50",
-      "Check-in runs 3x daily on Haiku 4.5; production meeting prep on Sonnet 4.6",
       "Homedrums auto-login configured so gateway survives reboots without a PIN prompt"
     ],
     "open_items": [
       "Microsoft 365 install incomplete: C2R installer failed, registry cleared but install not confirmed complete",
-      "Claude Code email triage corrections still pending",
       "Rocio Mahoney event contract: needs Jay review",
-      "Boehme $700 invoice: unpaid",
       "LVCC COI expired: needs resubmission",
       "GA DOL employer status report: needs filing",
       "Tailscale: key expiry off, MagicDNS, subnet routes still pending",
@@ -51,7 +44,7 @@
   {
     "date": "2026-06-02",
     "title": "Tailscale, Skills & QB Invoice Audit",
-    "summary": "Second full day of Hermes operation. Tailscale VPN mesh went fully live across all Jay's devices (Homedrums, Aura, StudioPro, Galaxy Fold 7, Synology NAS). New skills built for Android integrations, voice style guide, QB invoice design, and a Tailscale devops skill. Four new cron jobs created covering upcoming reminders and a daily QuickBooks invoice cleanup tracker. All automated crons ran successfully throughout the day.",
+    "summary": "Tailscale VPN mesh went fully live across all Jay's devices. New skills built for Android integrations, voice style guide, QB invoice design, and Tailscale devops. Four new cron jobs created covering upcoming reminders and a daily QuickBooks invoice cleanup tracker.",
     "topics": [
       "Tailscale",
       "Tech Setup",
@@ -63,42 +56,29 @@
     ],
     "work_done": [
       "Tailscale mesh VPN confirmed live on all devices: Homedrums (100.100.54.91), Aura (100.105.21.92), StudioPro (100.75.154.98), Galaxy Fold 7 (100.88.65.64), Synology NAS (100.99.185.57)",
-      "Created tailscale devops skill with full reference table, Windows binary path notes, and common commands",
-      "Created jay-android-integrations skill documenting what Hermes can/can't access on Galaxy Fold 7; confirmed ntfy.sh push live with JSON format fix",
-      "Created jay-voice skill v2.0: full 12-register style guide for writing in Jay's voice",
-      "Created jet-invoice-design skill: QB template audit (identified 7 dead giveaways it's QuickBooks) and prioritized fix list",
-      "Updated jet-personal-assistant skill with staff contacts, follow-up tracking, timezone/location rules for cron reminders, and QB invoice cleanup checklist",
-      "Updated google-workspace skill and ocr-and-documents skill",
-      "Set new cron: Reminder, Estimate categorization + P&L training with Cati (Wed June 3, 9am)",
-      "Set new cron: Thu backup reminder, Estimate categorization + P&L training with Cati (Thu June 4, 9am)",
-      "Set new cron: AI for Founders meeting prep reminder (Thu June 4, 8am)",
-      "Set new cron: QB Invoice Cleanup Daily Reminder (10am daily), tracks 7 open QB settings/design fixes",
-      "All automated crons ran successfully throughout day: 3x check-ins, production meeting prep, Plaud filer, client email watch (every 20min), PO approval watch",
-      "Jay traveling in NYC (returns to Las Vegas Sunday June 8)"
+      "Created tailscale devops skill, jay-android-integrations skill, jay-voice v2.0 style guide, jet-invoice-design skill",
+      "Updated jet-personal-assistant skill with staff contacts, follow-up tracking, and timezone/location rules",
+      "Set crons: Cati P&L training reminder (Jun 3), AI for Founders meeting prep (Jun 4 8am), QB Invoice Cleanup Daily Reminder (10am daily)",
+      "Jay traveling in NYC (returns Las Vegas June 8)"
     ],
     "key_decisions": [
-      "Tailscale confirmed as the VPN mesh for all device access: no port forwarding, all on same tailnet",
-      "Jay Voice skill v2.0 created as the canonical writing style guide: must be loaded before writing anything as Jay",
-      "QB invoice redesign broken into Easy/Medium/Hard tiers; daily reminder cron set to track progress",
-      "Cron reminder timezone rule established: default to 10am PT (safe for both PT and ET) when Jay is traveling",
-      "Jay returns from NYC June 8: review any ET-based crons before then"
+      "Tailscale confirmed as VPN mesh for all device access",
+      "Jay Voice skill v2.0 created as canonical writing style guide",
+      "QB invoice redesign broken into Easy/Medium/Hard tiers; daily reminder cron tracking progress",
+      "Cron reminder timezone rule: default to 10am PT when Jay is traveling"
     ],
     "open_items": [
-      "QB invoice cleanup: 7 items pending (T taxable flags, Sales Rep label, US in address, SHIP TO label, JET logo on page 2, BALANCE DUE restyling, invoice number relabeling)",
-      "Estimate categorization + P&L training with Cati: reminder set for June 3",
-      "AI for Founders meeting: reminder set for June 4 8am",
-      "Edge Factory / Webflow: updated estimate + renderings sent; Ross Reyes out June 3-12",
+      "QB invoice cleanup: 7 items pending (T taxable flags, Sales Rep label, SHIP TO label, JET logo page 2, BALANCE DUE restyling, invoice number relabeling)",
+      "Edge Factory / Webflow: updated estimate sent; Ross Reyes out June 3-12",
       "Valerie Kalemba / Westpac Wealth: health insurance BOR letter, 12+ days outstanding",
-      "Jude Barry / Pluma, call June 3 10:30am PT confirmed",
       "PowerFlex PO: waiting on Alan to clarify sell price",
-      "Microsoft 365 install still incomplete from June 1",
-      "Jay returns to Las Vegas June 8, review ET-based crons; Plaud CNC reminder fires June 8 9:30am PT"
+      "Microsoft 365 install still incomplete from June 1"
     ]
   },
   {
     "date": "2026-06-03",
     "title": "Invoice Design, Email Triage & Insurance",
-    "summary": "Active Wednesday session: production meeting prep ran successfully and flagged FBLA (June 5-8) as imminent and JET insurance policies as expired that morning. Jay worked on invoice design direction in Google Chat, settled on a monochrome, law-firm-level aesthetic (black/white/gray only) after rejecting colorful drafts. New LLM-powered email triage cron jobs were built and scheduled (2x daily Haiku 4.5 passes). Skills updated for email triage taxonomy, invoice design, brand assets, insurance policies, and jay-voice style guide. Two cron failures surfaced: Client Email Watch and PO Approval Watch both broken due to invalid deepseek model ID.",
+    "summary": "Production meeting prep flagged FBLA (June 5-8) as imminent and JET insurance policies as expired. Jay settled on monochrome law-firm aesthetic for invoice design (charcoal/white/gray). New LLM-powered email triage cron jobs built and scheduled. Two cron failures surfaced: Client Email Watch and PO Approval Watch broken due to invalid deepseek model ID.",
     "topics": [
       "Email Triage",
       "Invoice Design",
@@ -109,51 +89,34 @@
       "Cron Jobs"
     ],
     "work_done": [
-      "Production meeting prep cron ran at 7am: created doc '2026.06.03 FBLA-IPMI-MondaySOP' in Drive, flagged 8 urgent/action items including insurance expiry and FBLA in 2 days",
-      "Morning Priority check-in delivered calendar briefing: 4 events on Jay's calendar including Pluma call and production meeting",
-      "3x JET check-ins ran successfully (7am, 12pm, 3:50pm), surfaced Akur8 contract countersignature needed, Monday.com webhook broken, insurance expiry",
-      "Con Edison cancel reminder delivered at 6am (close account eff June 8)",
-      "Cati P&L / estimate categorization reminder delivered at 9am",
-      "QB Invoice Cleanup reminder delivered at 10am with 7-item checklist",
-      "Cancel Con Edison eff June 7 reminder created and delivered at 1pm",
-      "Created 2 new email triage cron jobs: 'JET Email Triage - LLM Reasoning Pass' (7am + 12pm) and '3:50pm' version, both on Haiku 4.5, full two-label rule with archive logic",
-      "Updated jet-email-triage skill (SKILL.md) with full LLM triage workflow",
-      "Created google-workspace reference file jet-gmail-label-taxonomy.md: complete label ID map and two-label triage rule",
-      "Updated jet-invoice-design skill with monochrome design direction settled June 3 (charcoal #4A4A4A header, white/gray body: McKinsey-level restraint)",
-      "Created jet-invoice-design reference: jet-brand-assets-june2026.md, full logo file Drive IDs and hex color palette",
-      "Created jet-invoice-design reference: jet-insurance-policies-june2026.md, all 4 expired Intact/Atlantic Specialty policies with numbers, premiums, and renewal status",
-      "Updated jet-personal-assistant skill with insurance policy detail, task list format preferences, Google Sheet day-planning option, and verify-before-flagging rule",
-      "Updated jay-voice style-tone-guide.md with observed email patterns",
-      "All Haiku-based check-in crons ran successfully; deepseek-based crons (Client Email Watch, PO Watch, Sent Email Observer) all failing with invalid model ID error"
+      "Created 2 new LLM email triage cron jobs (7am + 12pm + 3:50pm) on Haiku 4.5 with full two-label classification and archive logic",
+      "Updated jet-email-triage SKILL.md with full LLM triage workflow",
+      "Created jet-gmail-label-taxonomy.md: complete label ID map and two-label triage rule",
+      "Updated jet-invoice-design skill with monochrome direction (charcoal #4A4A4A header, McKinsey-level restraint)",
+      "Created jet-brand-assets-june2026.md and jet-insurance-policies-june2026.md references",
+      "Updated jet-personal-assistant with verify-before-flagging rule and task list format preferences",
+      "All 4 JET LLC insurance policies expired June 3; Jay replied to Daniel Hayden with equipment list"
     ],
     "key_decisions": [
-      "Invoice design direction: monochrome only (black/white/gray), target aesthetic is top-tier law firm or architecture firm invoice; teal/gold/color rejected by Jay",
-      "New email triage approach: LLM Reasoning Pass cron (Haiku 4.5) does full two-label classification with archiving, runs 7am, 12pm, 3:50pm weekdays",
-      "Insurance expiry acknowledged: all 4 JET LLC policies expired June 3; Jay replied to Daniel Hayden same day with equipment list; waiting on Acrisure to return quotes",
-      "Verify-before-flagging rule added to jet-personal-assistant: always check sent mail before telling Jay something needs his attention",
-      "Task list format preference documented: numbered items, Jay can say '1 is done, push 2 to tomorrow'"
+      "Invoice design: monochrome only (black/white/gray); color rejected by Jay",
+      "Email triage: LLM Reasoning Pass cron runs 7am, 12pm, 3:50pm weekdays on Haiku 4.5",
+      "Verify-before-flagging rule: always check sent mail before telling Jay something needs his attention"
     ],
     "open_items": [
-      "JET LLC insurance renewal: all 4 policies expired June 3; waiting on Acrisure/Daniel Hayden to return quotes",
-      "Akur8 contract: countersignature needed from Jay via AdobeSign (Heide Sacher sent signed contract)",
-      "Monday.com webhook broken: automation disabled, board integrity at risk; needs re-config",
-      "deepseek/deepseek-chat-v4-flash model ID invalid on OpenRouter: Client Email Watch, PO Approval Watch, and Jay Voice Sent Email Observer all failing every run; model needs to be changed",
+      "JET LLC insurance renewal: all 4 policies expired June 3; waiting on Acrisure/Daniel Hayden for quotes",
+      "Akur8 contract: countersignature needed from Jay via AdobeSign",
+      "Monday.com webhook broken: automation disabled, needs re-config",
+      "deepseek/deepseek-chat-v4-flash model ID invalid: Client Email Watch, PO Approval Watch, Sent Email Observer all failing",
       "FBLA event June 5-8 (Westgate): Chelsea needs to confirm all logistics",
-      "Rocio Mahoney contract: 1+ day overdue per production meeting prep",
-      "PowerFlex IPMI (June 14-17): Alan's proposal unanswered 7+ days, fabrication windows closing",
-      "Zendesk SKO: 19 days frozen; Jay may need to call directly",
+      "PowerFlex IPMI (June 14-17): Alan's proposal unanswered 7+ days",
       "Adobe Summit overage: Cati blocked 7+ days waiting on Jay's approval",
-      "QB invoice cleanup: 7 items still pending",
-      "TaxJar sales tax returns due this month: 4 states, not enrolled in AutoFile",
-      "NV JET LLC biz license renewal due July 1 (28 days out)",
-      "Estimate categorization + P&L training with Cati: reminder fired today, unclear if completed",
-      "Jay returns to Las Vegas June 8: review ET-based crons before then"
+      "QB invoice cleanup: 7 items still pending"
     ]
   },
   {
     "date": "2026-06-04",
     "title": "Check-Ins, Triage & New Business Leads",
-    "summary": "Full autonomous operations day, no production meeting (silent exit). All three daily check-ins ran successfully surfacing new urgent items: ProtoGroup website proposal request, IPMI PowerFlex payment blockage (event June 14-15), World of Concrete 2027 inquiry from Reading Truck, and Atomic Design pricing discussion. Email triage ran 2x (12pm + 3:50pm), processing 44 total threads with dual-label classification. AI Cost Monitor logged a new $100 Anthropic charge, bringing June total to $762.81. AI for Founders reminder fired at 8am; Cati P&L backup reminder at 9am. All skills and crons running stable.",
+    "summary": "Full autonomous operations day. All three daily check-ins surfaced new urgent items: ProtoGroup website proposal, IPMI PowerFlex payment blockage, World of Concrete 2027 inquiry from Reading Truck, and Atomic Design pricing discussion. Email triage ran 2x, processing 44 total threads. AI Cost Monitor logged June total at $762.81.",
     "topics": [
       "JET Business",
       "Automation",
@@ -163,54 +126,33 @@
       "Cost Management"
     ],
     "work_done": [
-      "Production Meeting Prep cron ran at 7am: no meeting on calendar, exited silently",
-      "AI for Founders meeting reminder delivered at 8am with Google Doc link",
-      "Cati estimate categorization/P&L backup reminder delivered at 9am",
-      "Morning Priority Check-In at 9am, surfaced 3 calendar items: ShopSabre CNC training task (10am), COI for Gloria/Pfau (10:30am), Pluma call with Jude Barry (3pm)",
-      "QB Invoice Cleanup reminder delivered at 10am: 7-item checklist still pending",
-      "JET Check-In at 7am, flagged: Atomic Design (Sally King) pricing inquiry, Quote #FR8252 (JET Event Rentals), Chelsea workflow approval needed, MCLO 2026 payment received ($11,488.98), Jenna Clarke approved for remote (possible pneumonia)",
-      "JET Check-In at 12pm, flagged: World of Concrete 2027 (Reading Truck/Emilly Heine, 30x40 booth, URGENT), Chelsea Re: New Vendor Onboarding, Pluma call confirmed by Jude at 9:28am",
-      "JET Email Triage (12pm run), 30 threads labeled and archived; 1 label correction (WoC reassigned to Clients/Reading Truck); breakdown: 1 URGENT, 11 TODAY, 18 ROUTINE",
-      "JET Check-In at 3:50pm, flagged: ProtoGroup proposal meeting request (Fyez Irfan, website wireframes), IPMI PowerFlex payment hold-up (booth prep, Annie arriving 6/13), General Liability settlement routing issue",
-      "JET Email Triage (3:50pm run), 14 threads processed; 8 TODAY-urgency (IPMI payment, ProtoGroup wireframes, 2x GL incidents, 3 COI requests, Estimate Builder testing)",
-      "AI Cost Monitor ran at 8pm: logged new Anthropic $100 charge (API credits top-up); June total updated to $762.81",
-      "@Hermes Sent Mail Watcher: no new @hermes mentions, silent",
-      "JET Lead Monitor (every 30m): ran throughout day, silent (no new inbound leads detected)",
-      "Plaud Auto-Filer ran hourly: no new transcripts to file, silent all day",
-      "jet-email-triage SKILL.md updated (Jun 4 08:58)",
-      "google-workspace SKILL.md updated (Jun 4 08:57)",
-      "USER.md memories updated with latest Jay profile notes"
+      "3x JET check-ins and 2x email triage passes ran successfully all day",
+      "MCLO 2026 payment received ($11,488.98), Jenna Clarke approved for remote",
+      "World of Concrete 2027 (Reading Truck/Emilly Heine, 30x40) flagged URGENT in triage",
+      "ProtoGroup (Fyez Irfan) website proposal meeting request elevated to TODAY priority",
+      "AI Cost Monitor: June total updated to $762.81 (new $100 Anthropic charge)"
     ],
     "key_decisions": [
-      "No production meeting today (Thursday): cron correctly exited silently",
-      "World of Concrete 2027 (Reading Truck) flagged as URGENT in triage: 30x40 booth for January 2027 needs planning kickoff",
-      "IPMI Parking & Mobility Expo payment issue escalated: Annie Gala (PowerFlex) offering AMEX if AP/ACH routing fails; event is June 14-15",
-      "ProtoGroup website proposal elevated to TODAY priority: Fyez Irfan requesting meeting for next week + wireframe review",
-      "AI spend tracking active: June 2026 running total $762.81 (+ Google Cloud TBD)"
+      "World of Concrete 2027 (Reading Truck) flagged URGENT: 30x40 booth for January 2027 needs planning kickoff",
+      "IPMI payment issue escalated: Annie Gala (PowerFlex) offering AMEX if AP/ACH routing fails; event June 14-15",
+      "AI spend tracking active: June 2026 running total $762.81"
     ],
     "open_items": [
-      "IPMI Parking & Mobility Expo: PowerFlex payment hold-up; materials must arrive by Fri 6/14; Annie Gala on-site Sat 6/13",
-      "ProtoGroup (Fyez Irfan): Website proposal meeting requested for next week; wireframe review pending",
-      "World of Concrete 2027: Reading Truck (Emilly Heine) 30x40 booth inquiry; planning kickoff needed",
-      "General Liability settlement: Annie Gala/Alan open charge routing via AP/ACH or AMEX",
-      "Atomic Design (Sally King): pricing + warehouse sample drop-off discussion pending",
-      "Quote #FR8252: JET Event Rentals (Shannon), Global Coffee Table inquiry awaiting follow-up",
-      "Chelsea workflow approval: sign-off on new process she's drafting",
+      "IPMI Parking & Mobility Expo: PowerFlex payment hold-up; Annie Gala on-site June 13, event June 14-15",
+      "ProtoGroup (Fyez Irfan): website proposal meeting pending for next week",
+      "World of Concrete 2027: Reading Truck 30x40 booth; planning kickoff needed",
       "Hertz driver's license expired: update before next trip booking",
-      "Send Gloria COI for new insurance policy (Acrisure/Pfau): was on today's calendar",
       "ShopSabre CNC training: schedule and pay; Plaud/GoPro reminder set for June 8",
-      "JET LLC insurance renewal: all 4 policies expired June 3; Acrisure quotes still pending",
-      "Akur8 contract countersignature: AdobeSign link still outstanding",
-      "Monday.com webhook broken: needs re-config",
+      "JET LLC insurance renewal: Acrisure quotes still pending",
+      "Akur8 contract countersignature: AdobeSign still outstanding",
       "QB invoice cleanup: 7 items still pending",
-      "deepseek model ID fix still needed for Client Email Watch, PO Approval Watch, Sent Email Observer",
-      "Jay returns to Las Vegas June 8, review ET-based crons; Plaud CNC reminder fires June 8 9:30am PT"
+      "deepseek model ID fix still needed"
     ]
   },
   {
     "date": "2026-06-05",
     "title": "FBLA Day, NY Move & Autonomous Ops",
-    "summary": "Friday autonomous operations day, Jay in NYC handling movers (Hudson 36 move-out 9am) while FBLA conference started at Westgate Las Vegas. Production meeting skipped (not on calendar). 3x check-ins and 3x email triage passes ran successfully. Cati replied to the estimate categorization thread with a heartfelt acknowledgment. New items surfaced: Form 5500 ADP compliance deadline (July 14), GitHub token expiry for jet-estimate-builder-bolt (1-day warning), EdgeFactory JumpStart follow-up, and Edward Jones financial wellness program inquiry. AI Cost Monitor logged a new OpenRouter charge, bringing June total to $789.30. deepseek-based crons (Client Email Watch, PO Approval Watch, Sent Email Observer) continued failing all day, 46 failed runs logged.",
+    "summary": "Friday autonomous ops day. Jay in NYC handling movers (Hudson 36 move-out 9am) while FBLA started at Westgate Las Vegas. 3x check-ins and 3x email triage ran successfully. New items: Form 5500 ADP compliance (July 14), GitHub token expiry for jet-estimate-builder-bolt (1-day warning). AI Cost Monitor June total updated to $789.30. deepseek crons continued failing (46 failed runs).",
     "topics": [
       "JET Business",
       "Automation",
@@ -220,51 +162,36 @@
       "Compliance"
     ],
     "work_done": [
-      "Production Meeting Prep cron ran at 7am: no production meeting on calendar (FBLA, Movers, Warehouse AC only); exited silently",
-      "Morning Priority Check-In at 9am: surfaced movers arrival 9-10am and J&T commission invoice payroll task at 11am",
-      "JET Check-In at 7am, flagged: Royal Plywood invoice, Form 5500 ADP compliance deadline (July 14), GitHub token expiry for jet-estimate-builder-bolt (1 day), COI open outbound to Cati, Con Edison power cancel confirmation to T. Palmer",
-      "JET Check-In at 12pm, flagged: EdgeFactory JumpStart Follow-up (Michelle Culpepper), Reading Truck QB invoice #256311 ($2,575.49 due 7/1), movers completed, NeoCon 2026 starts June 8, Jay returning June 8",
-      "JET Check-In at 3:50pm, flagged: Aaron Pressman (EdgeFactory) JumpStart reply needs action, Chelsea Leadership Action Plan (Days 31-60), new vendor onboarding process confirmations from Aleksandra and Jenna",
-      "JET Email Triage 7am pass, 50 threads scanned; 35 labeled + archived; breakdown: 15 __Today, 20 _Routine; key: 6 PowerFlex/IPMI emails flagged __Today, Form 5500 compliance flagged",
-      "JET Email Triage 12pm pass, inbox cleared completely; 28 threads triaged: 2 client (EdgeFactory JumpStart, Reading Truck WoC), 5 JET Business (__Today), 16 personal/admin (_Routine), 18 promo archived without labels",
-      "JET Email Triage 3:50pm pass, 22 threads triaged; new clients surfaced: Digital Owl (LTL freight), Insurity (ITC 2026 booth), Edge Factory (Webflow + JumpStart), PowerFlex (IPMI); 8 __Today, 14 _Routine",
-      "Cati Watch cron delivered Cati's reply at 12:25am, she responded to estimate categorization thread with professional acknowledgment; watched cron ran 38 times during the day",
-      "QB Invoice Cleanup reminder delivered at 10am: 7-item checklist still pending",
-      "AI Cost Monitor at 12pm: logged new OpenRouter charge $26.49; June running total updated to $789.30",
-      "AI Cost Monitor at 8pm: no new charges; silent exit",
-      "deepseek/deepseek-chat-v4-flash invalid model error continued all day: 43 failed Client Email Watch runs + 3 failed PO Approval Watch runs (46 total errors)",
-      "USER.md memories updated (Jay's no-tilde keyboard, URL formatting rules, email sign-off rule confirmed)"
+      "3x check-ins and 3x email triage passes ran (100 threads processed across all passes)",
+      "New clients surfaced: Digital Owl (LTL freight), Insurity (ITC 2026 booth), Edge Factory (Webflow + JumpStart)",
+      "Cati Watch delivered Cati's reply to estimate categorization thread",
+      "AI Cost Monitor: $26.49 OpenRouter charge; June total updated to $789.30",
+      "USER.md updated with Jay's no-tilde keyboard, URL formatting rules, email sign-off rule"
     ],
     "key_decisions": [
-      "No production meeting Friday June 5: correct silent exit",
-      "Jay out of office auto-reply active (returning June 8): Chelsea Blake handling escalations",
-      "Form 5500 ADP compliance deadline July 14 surfaced as new item: needs Jay action",
+      "Jay out of office auto-reply active (returning June 8), Chelsea Blake handling escalations",
+      "Form 5500 ADP compliance deadline July 14 surfaced: needs Jay action",
       "GitHub token for jet-estimate-builder-bolt expiring June 6: needs renewal",
-      "deepseek model ID issue still unresolved: 46 failed cron runs today; fix needed before Monday"
+      "deepseek model ID issue still unresolved: 46 failed cron runs today"
     ],
     "open_items": [
-      "deepseek/deepseek-chat-v4-flash model ID fix URGENT: Client Email Watch, PO Approval Watch, Sent Email Observer all failing; 46 failed runs June 5 alone",
-      "GitHub token: jet-estimate-builder-bolt expires June 6 (flagged 1-day warning June 5)",
+      "deepseek/deepseek-chat-v4-flash model ID fix URGENT: 46 failed runs June 5 alone",
+      "GitHub token: jet-estimate-builder-bolt expires June 6",
       "Form 5500 ADP compliance: due July 14, 2026; Jay action required",
       "EdgeFactory (Aaron Pressman): JumpStart Follow-up needs response",
-      "Digital Owl: LTL freight coordination via AIT Worldwide Logistics; invoice adjustments in progress",
       "Insurity: ITC 2026 booth planning; meeting scheduled June 10",
-      "IPMI Parking & Mobility Expo: PowerFlex payment still unresolved; Annie Gala on-site June 13, event June 14-15",
-      "World of Concrete 2027: Reading Truck 30x40 booth; planning kickoff still needed",
-      "ProtoGroup (Fyez Irfan): website proposal meeting still pending",
-      "QB invoice cleanup: 7 items still pending",
-      "JET LLC insurance renewal: all 4 policies expired June 3; Acrisure quotes still pending",
+      "IPMI PowerFlex payment still unresolved; event June 14-15",
+      "World of Concrete 2027: Reading Truck 30x40 planning kickoff still needed",
+      "JET LLC insurance renewal: Acrisure quotes still pending",
       "Akur8 contract countersignature: AdobeSign still outstanding",
-      "Monday.com webhook broken: needs re-config",
       "Edward Jones Financial Wellness: launch call requested for JET LLC program",
-      "New Vendor Onboarding Process: team acknowledged; Chelsea's process rolling out",
-      "Jay returns Las Vegas June 8, 3x CNC/Plaud reminders set for 7am, 9:30am, 12:30pm PT"
+      "Jay returns Las Vegas June 8"
     ]
   },
   {
     "date": "2026-06-08",
-    "title": "Email Triage Overhaul and Security Audit",
-    "summary": "Jay returned to Las Vegas from NYC. Long working session focused on deep Gmail triage overhaul: fixed multi-label violations across 7 threads, rewrote inbox_triage.py to properly archive on label, and corrected Personal label misuse (211 emails relabeled). Full GitHub security audit (305 events) confirmed clean across all machines and repos. Sent Pluma partnership email to Jude, added BK Lee to Google Contacts, set up Tennessee TNTAP auto-forward to Cati. All crons hit OpenRouter 403 budget limit error.",
+    "title": "Email Triage Overhaul, Security Audit & Budget Reset",
+    "summary": "Jay returned to Las Vegas from NYC. Deep Gmail triage overhaul: fixed multi-label violations, rewrote inbox_triage.py with working archive logic, corrected Personal label misuse (211 emails relabeled). Full GitHub security audit (305 events, clean). Sent Pluma partnership email to Jude Barry, added BK Lee to Google Contacts, set up Tennessee TNTAP auto-forward to Cati. OpenRouter monthly budget cap was hit (all crons returned 403 through midday), then resolved. Nous subscription upgraded to $50/mo.",
     "topics": [
       "Email Triage",
       "JET Business",
@@ -274,48 +201,100 @@
       "Google Workspace"
     ],
     "work_done": [
-      "Full GitHub security audit -- 305 events reviewed, all actors jta333/ghost, zero indicators of compromise across Homedrums/Aura/StudioPro",
-      "Fixed 7 Gmail thread label violations (>2 user labels) -- stripped to correct urgency + subject pair",
-      "Found and fixed two bugs in inbox_triage.py: pre-labeled emails never archived, newly labeled emails never had INBOX removed",
-      "Bulk-relabeled 211 emails mislabeled as Personal to JET Business or Travel",
-      "Corrected Personal label definition: Personal = emails to/from Jay personally or friends/family only; unsure = always ask",
-      "Rewrote inbox_triage.py with working archive logic (Clients/* labels now recognized as subject labels)",
-      "Ran triage_fix.py in batches to clear full inbox backlog",
-      "Re-authorized Google OAuth to add contacts write scope -- added BK Lee (BTWN Exhibits) to Google Contacts",
-      "Set BK Lee call reminder (2h from session) re: potential partnership",
+      "Full GitHub security audit: 305 events reviewed, all actors jta333/ghost, zero indicators of compromise",
+      "Fixed 7 Gmail thread label violations; bulk-relabeled 211 emails mislabeled as Personal",
+      "Rewrote inbox_triage.py with working archive logic (remove INBOX in same API call as label add)",
+      "Corrected Personal label definition: only to/from Jay personally or friends/family",
+      "Re-authorized Google OAuth with contacts write scope; added BK Lee (BTWN Exhibits) to Google Contacts",
       "Wrote and sent informal email to Jude Barry (Hey Pluma) about convention circuit opportunity",
-      "Set 48-hour follow-up reminder for Travelers Insurance cancellation to Cecilia Wolfson",
-      "Set up Auto-Forward cron: Tennessee TNTAP tax emails to Cati Avina (daily)",
-      "Drafted and sent reply to A-TECH Heating and Cooling (blank email was accidentally sent mid-session)",
-      "Trashed Sur La Table marketing emails (9) and moved Instacart/DoorDash (10) to JET Business",
-      "All cron jobs (check-ins, triage, reminders) failed throughout day with OpenRouter 403 Budget Limit Exceeded error"
+      "Set up TNTAP auto-forward cron: Tennessee tax emails to Cati Avina daily",
+      "Set 48-hour follow-up reminder for Travelers Insurance cancellation (Cecilia Wolfson)",
+      "Nous subscription upgraded from $20 Plus to $50/mo (receipt #1259-0350)",
+      "OpenRouter monthly budget cap hit; all crons blocked with 403 through midday; cap increase resolved",
+      "3:50pm email triage ran successfully (budget restored): 500+ threads organized, inbox clean",
+      "Morning briefing at 7am surfaced: Gitleaks blocked on jet-command-center and estimate-prod PRs, WoC 2027 Reading Truck still open, CNC training at 1:15pm",
+      "Production meeting prep ran: full June 9 agenda built including Montana project loss note",
+      "Reminders fired: Plaud/GoPro pack (7am), Jude/Josh (9am), Plaud placement (9:30am), StudioPro security scan (10:41am)",
+      "plaud_transcript_handler.py script not found: Plaud Auto-File cron failing (script missing from scripts/)"
     ],
     "key_decisions": [
-      "Personal label rule finalized: only to/from Jay personally or friends/family; everything else defaults to JET Business",
-      "Email triage must audit at thread level not message level -- Gmail shows aggregated thread labels in UI",
-      "inbox_triage.py rewritten to archive atomically when labeling (remove INBOX in same API call)",
-      "If label assignment is unsure, always ask Jay -- never default to Personal or guess",
-      "OpenRouter monthly budget cap hit -- all Hermes crons blocked with 403; cap increase needed immediately",
-      "Tennessee TNTAP tax emails to auto-forward to Cati daily going forward"
+      "Personal label rule finalized: only to/from Jay personally or friends/family; default to JET Business when unsure",
+      "inbox_triage.py rewritten to archive atomically when labeling",
+      "Tennessee TNTAP tax emails auto-forward to Cati daily going forward",
+      "OpenRouter monthly cap increased (budget 403 errors resolved)",
+      "Nous subscription upgraded to $50/mo"
     ],
     "open_items": [
-      "OpenRouter monthly budget limit EXCEEDED -- all cron jobs returning 403; cap increase needed ASAP",
-      "inbox_triage.py: inbox still not fully clean at session end (budget error cut session short)",
-      "A-TECH blank email incident: apology reply sent, root cause of accidental send during bulk label-fix needs investigation",
-      "IPMI Parking and Mobility Expo -- PowerFlex payment unresolved; Annie Gala on-site June 13, event June 14-15",
-      "World of Concrete 2027 -- Reading Truck 30x40 booth; planning kickoff still needed",
-      "ProtoGroup (Fyez Irfan) -- website proposal meeting still pending",
-      "QB invoice cleanup -- 7 items still pending",
-      "JET LLC insurance renewal -- Acrisure quotes still pending (all 4 policies expired June 3)",
-      "Akur8 contract countersignature -- AdobeSign link still outstanding",
-      "Monday.com webhook broken -- needs re-config",
+      "plaud_transcript_handler.py missing from scripts/: Plaud Auto-File cron failing every hour",
+      "Gitleaks blocked on jet-command-center and estimate-prod PRs: review or re-run security scan",
+      "StudioPro Miasma worm security scan: commands sent to Jay; awaiting output from StudioPro",
+      "inbox_triage.py: inbox may not be fully clean at session end (budget error cut session short earlier)",
+      "A-TECH blank email incident: apology reply sent; root cause of accidental send needs investigation",
+      "IPMI Parking and Mobility Expo: PowerFlex payment unresolved; Annie Gala on-site June 13, event June 14-15",
+      "World of Concrete 2027: Reading Truck 30x40 booth; planning kickoff still needed",
+      "ProtoGroup (Fyez Irfan): website proposal meeting still pending",
+      "QB invoice cleanup: 7 items still pending",
+      "JET LLC insurance renewal: Acrisure quotes still pending (all 4 policies expired June 3)",
+      "Akur8 contract countersignature: AdobeSign still outstanding",
+      "Monday.com webhook broken: needs re-config",
       "deepseek model ID fix still needed: Client Email Watch, PO Approval Watch, Sent Email Observer",
-      "Travelers insurance cancellation (NY apt) -- follow-up reminder set for June 10 if Cecilia does not respond",
-      "BK Lee call -- reminder fired today; outcome unknown",
-      "CNC/ShopSabre training with Ken -- reminder fired today; Plaud transcript expected",
-      "Form 5500 ADP compliance -- due July 14; Jay action required",
-      "Edward Jones Financial Wellness -- launch call requested for JET LLC program",
-      "GitHub token for jet-estimate-builder-bolt -- expired June 6 (was flagged June 5)"
+      "Travelers insurance cancellation (NY apt): follow-up reminder set for June 10",
+      "BK Lee call: reminder fired today; outcome unknown",
+      "CNC/ShopSabre training with Ken: reminder fired today; Plaud transcript expected",
+      "Form 5500 ADP compliance: due July 14; Jay action required",
+      "Edward Jones Financial Wellness: launch call requested",
+      "GitHub token for jet-estimate-builder-bolt: expired June 6"
+    ]
+  },
+  {
+    "date": "2026-06-09",
+    "title": "Production Meeting Day & Security Scan",
+    "summary": "Tuesday morning crons ran cleanly after OpenRouter budget was restored. Production meeting scheduled today (4:30pm) with Montana project update as opening item. Morning briefing surfaced Gitleaks blocks on two repos and a full security scan request for StudioPro. Lead monitor running all day with only automated emails (silent). Plaud auto-filer running but too early for transcript window. UpdraftVault storage warning noted.",
+    "topics": [
+      "JET Business",
+      "Automation",
+      "Cron Jobs",
+      "Security Audit",
+      "Production Meeting"
+    ],
+    "work_done": [
+      "Morning briefing (7am) delivered: CNC training at 1:15pm, production meeting at 4:30pm, multiple calendar items, Gitleaks security flags",
+      "Production meeting prep (7am) ran: full June 9 agenda built with Montana project loss note as opening item",
+      "Reminders fired: Pack Plaud/GoPro (7am), Jude/Josh connect reminder (9am), Plaud placement reminder (9:30am)",
+      "StudioPro security scan reminder (10:41am): Miasma worm check commands delivered for 4 project repos",
+      "Lead monitor ran all day (every 30min): only automated emails (TNTAP confirmation, UpdraftVault storage warning) -- all silent",
+      "Plaud auto-filer running hourly: no transcript yet (meeting at 4:30pm, window not open yet)",
+      "Wiki update cron ran at 8pm on June 8 (previous day): silent exit (ran under old job format)",
+      "UpdraftVault storage warning received: automated WordPress backup storage notification"
+    ],
+    "key_decisions": [
+      "Montana project not won: turned into new client relationship (event planner impressed by JET speed and capability)",
+      "Production meeting June 9 opening: Montana update framed as team capability win, not a loss",
+      "Gitleaks blocks on jet-command-center and estimate-prod require Jay review before PRs can merge",
+      "StudioPro security scan (Miasma worm check) was triggered due to prior GitHub PR activity"
+    ],
+    "open_items": [
+      "Production meeting June 9 at 4:30pm: Montana update, active jobs (Redken June 12-15 most urgent), CAD deadlines (Turn14 June 12, Akur8 June 19)",
+      "Gitleaks blocked on jet-command-center and estimate-prod PRs: needs Jay review",
+      "StudioPro Miasma worm security scan: awaiting Jay to run commands and paste output",
+      "plaud_transcript_handler.py missing from scripts/: Plaud Auto-File cron still failing",
+      "Redken Symposium (L'Oreal/Wolf&White): June 12-15 Caesars Forum, active build -- most urgent",
+      "Turn14 / SEMA CAD due June 12: Derek Sheffield on it",
+      "Akur8 / ITC 2026 CAD due June 19",
+      "Reading Truck / Government Fleet (June 9-12, Long Beach): status TBD",
+      "CNC training with Ken today at 1:15pm: Plaud transcript expected",
+      "BK Lee (BTWN Exhibits) call: outcome still unknown from June 8",
+      "IPMI PowerFlex payment: still unresolved; Annie Gala on-site June 13",
+      "World of Concrete 2027: Reading Truck planning kickoff still needed",
+      "Travelers insurance cancellation (NY): follow-up if Cecilia doesn't reply by June 10",
+      "Insurity ITC 2026 booth: meeting June 10",
+      "LVCA listing follow-up with Marisa Allegra: she returns OOO June 10",
+      "Matt Smedley declined production meeting July 6 (OOO): may need replacement attendee",
+      "Form 5500 ADP compliance: due July 14",
+      "JET LLC insurance renewal: Acrisure quotes still pending",
+      "Akur8 contract countersignature: AdobeSign still outstanding",
+      "QB invoice cleanup: 7 items still pending",
+      "UpdraftVault storage: backup storage warning received, may need capacity increase"
     ]
   }
 ]
