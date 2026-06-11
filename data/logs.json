@@ -5,7 +5,7 @@
     "summary": "Launched Hermes from scratch: connected Google Chat via Pub/Sub, built email archive/triage automation, and set up the memory wiki with cron jobs. Afternoon sessions tackled cost control (switched Opus to Sonnet after $25 burned, set $50 cap), attempted Microsoft 365 install (hit C2R errors, ran registry resets), and hardened Homedrums with never-sleep settings and auto-login so the PC survives power loss without blocking the gateway.",
     "topics": [
       "Tech Setup",
-      "Email",
+      "Email Triage",
       "JET Business",
       "Automation",
       "Google Chat",
@@ -208,7 +208,6 @@
       "Re-authorized Google OAuth with contacts write scope; added BK Lee (BTWN Exhibits) to Google Contacts",
       "Wrote and sent informal email to Jude Barry (Hey Pluma) about convention circuit opportunity",
       "Set up TNTAP auto-forward cron: Tennessee tax emails to Cati Avina daily",
-      "Set 48-hour follow-up reminder for Travelers Insurance cancellation (Cecilia Wolfson, fires June 10)",
       "Nous subscription upgraded from $20 Plus to $50/mo (receipt #1259-0350)",
       "OpenRouter monthly budget cap hit; all crons blocked with 403 through midday; cap increase resolved",
       "3:50pm email triage ran successfully (budget restored): 500+ threads organized, inbox clean",
@@ -234,7 +233,6 @@
       "Akur8 contract countersignature: AdobeSign still outstanding",
       "Monday.com webhook broken: needs re-config",
       "deepseek model ID fix still needed: Client Email Watch, PO Approval Watch, Sent Email Observer",
-      "Travelers insurance cancellation (NY apt): follow-up check scheduled June 10",
       "BK Lee call: reminder fired today; outcome unknown",
       "CNC/ShopSabre training with Ken: reminder fired today; Plaud transcript expected",
       "Form 5500 ADP compliance: due July 14; Jay action required",
@@ -287,7 +285,7 @@
     "open_items": [
       "Armory (June 10): closes 4pm -- 3 reminders set",
       "Demo Rehearsal (June 10 10am): AI for Founders presentation is June 11 at 11:30am ET",
-      "Travelers Insurance cancellation: Cecilia Wolfson follow-up auto-check fires June 10 10:37am",
+      "Travelers Insurance cancellation: Cecilia Wolfson follow-up fires June 10 10:37am",
       "George pricing issue: follow-up reminder June 10 2pm",
       "Carolyn at Outreach: research done; still needs follow-up from Jay",
       "Lina Burleson at Zendesk: research done; non-responsive",
@@ -307,6 +305,65 @@
       "QB invoice cleanup: 7 items still pending",
       "Form 5500 ADP compliance: due July 14",
       "GitHub token for jet-estimate-builder-bolt: expired June 6"
+    ]
+  },
+  {
+    "date": "2026-06-10",
+    "title": "Morning Briefing, Triage Corrections & Leads",
+    "summary": "Autonomous ops day. Morning briefing flagged 6 action items including a large Webflow carpet request (17,039 sq ft), Insurity hanging sign question, VCW refund approval, Monday.com guest access, a bounced Wolters Kluwer email, and a Structure Exhibits RFP. Email triage ran 3x (7am, 12pm, 3:50pm); 3:50pm pass cleared inbox to zero after correcting 14 mislabeled client emails (Insurity, Encore, OATI). Travelers NY apartment insurance cancellation confirmed resolved -- $272 refund due. Lead Monitor surfaced Encore Global a.m. Teams call request (Raul Martinez, AAA Sep event) and ProtoGroup website FAQ decision needed from Jay. LVCVA listing confirmed updated. Demo rehearsal reminder fired for June 11 AI for Founders presentation.",
+    "topics": [
+      "JET Business",
+      "Automation",
+      "Email Triage",
+      "Cron Jobs",
+      "New Business",
+      "Production Meeting",
+      "Reminders"
+    ],
+    "work_done": [
+      "Morning briefing at 7:12am: 6 action items surfaced (Webflow carpet, Insurity hanging sign, VCW refund, Monday.com guest access, Wolters Kluwer bounced email, Structure Exhibits RFP)",
+      "7am email triage: 21 labeled/archived, 6 flagged (Proto Group x2, T Palmer Agency x2, Silver Social Games x1, ADP spam x1) -- 3 new client labels needed",
+      "3:50pm email triage: inbox cleared to zero, 30 processed, 14 mislabeled client emails corrected (3 Insurity, 11 Encore, 1 OATI)",
+      "Travelers insurance cancellation RESOLVED: policy 615802552-634-1 cancelled June 8 by Jimmy Singh (Capstone); $272 unearned premium refund due",
+      "LVCVA listing confirmed updated (Marisa Allegra reply surfaced in Lead Monitor)",
+      "Armory 9am and 12pm reminders delivered",
+      "George pricing issue reminder delivered at 2pm",
+      "Demo Rehearsal reminder fired at 10am: AI for Founders presentation June 11 11:30am ET",
+      "Lead Monitor 2:16pm: [A] Raul Martinez (Encore Global) requesting Teams call re AAA Sep event backdrop/scenic -- Alan on thread; [B] Fyez Irfan (ProtoGroup) asking Jay directly about FAQ page consolidation on jettheagency.com",
+      "Dentsu payment $8,129 pending deposit into BofA flagged as good news",
+      "June 10 calendar: 2pm Zoom Jason Health Insurance (Jason Frederico + Valerie Kalemba/WestPac); 5:30pm Mentor Appreciation Happy Hour IN PERSON (Wineaux Uncommons)",
+      "June 11 calendar confirmed: AI for Founders 8:30am, Chelsea standup 10am, KonstructAI/FundNV2 12:45pm, SeedVegas Startup Showcase 6pm IN PERSON"
+    ],
+    "key_decisions": [
+      "Gmail client labels needed: Clients/Proto Group, Clients/T Palmer Agency, Clients/Silver Social Games -- must be created to clear flagged triage backlog",
+      "Travelers NY apartment insurance CLOSED: cancelled effective Jun 8; $272 refund expected",
+      "LVCVA listing: confirmed updated as of June 10"
+    ],
+    "open_items": [
+      "Webflow Carpet (Abbie Bohlin/Edge Factory): can JET supply carpet for 17,039 sq ft Momentum Ballroom with cable padding? Jay yes/no or assign Alexa",
+      "Insurity ITC Hanging Sign (Jessica Smith): needs Jenna to reply about separate labor cost; deadline Aug 10",
+      "VCW Refund Approval: Jay must log in to authorize John Rey Bongala refund (code 7844480)",
+      "Monday.com guest access (Mariane): only Jay has permission controls; needs to extend",
+      "Wolters Kluwer bounced email: resend to correct domain @wolterskluwer.com (not @woltersklower.com)",
+      "Structure Exhibits RFP (via Aleksandra): Jay needs to decide whether JET should respond",
+      "Magic Garden Agency refund: accounting recommends CC refund over wire to avoid chargeback; Jay to revisit Thursday Jun 12",
+      "ProtoGroup website (jettheagency.com): Fyez Irfan waiting for Jay decision on FAQ page consolidation to unblock build",
+      "Gmail client labels needed: Clients/Proto Group, Clients/T Palmer Agency, Clients/Silver Social Games",
+      "AI for Founders presentation: June 11 8:30am PT (11:30am ET) -- prep done",
+      "Lee Teva / Silver Social Games: Chelsea follow-up check-in June 11 2pm",
+      "IPMI PowerFlex payment: Annie Gala on-site June 13, event June 14-15; still unresolved",
+      "World of Concrete 2027: Reading Truck 30x40 booth; planning kickoff still needed",
+      "deepseek model ID fix still needed: Client Email Watch, PO Approval Watch, Sent Email Observer",
+      "JET LLC insurance renewal: Acrisure quotes still pending (all 4 policies expired June 3)",
+      "Akur8 contract countersignature: AdobeSign still outstanding",
+      "QB invoice cleanup: 7 items still pending",
+      "Form 5500 ADP compliance: due July 14",
+      "Edward Jones Financial Wellness: launch call requested",
+      "GitHub token for jet-estimate-builder-bolt: expired June 6",
+      "Monday.com webhook still broken: needs re-config",
+      "NV Sales Tax $5,121.68: reminder June 17 (Cati/Nevada DOR Aug 2025 refund amendment)",
+      "V-Carve / Bo lock-in: reminder June 17 10am",
+      "LVCVA listing follow-up auto-check scheduled June 12"
     ]
   }
 ]
