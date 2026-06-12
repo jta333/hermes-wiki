@@ -365,5 +365,64 @@
       "V-Carve / Bo lock-in: reminder June 17 10am",
       "LVCVA listing follow-up auto-check scheduled June 12"
     ]
+  },
+  {
+    "date": "2026-06-11",
+    "title": "Packed Calendar, Insurance Urgency & Lead Budget Confirmed",
+    "summary": "Busy autonomous ops day with a packed calendar. Morning briefing covered 6 meetings including Practical AI for Busy Founders Group, health insurance call with Jason Frederico and Valerie Kalemba, Chelsea standup, KonstructAI/FundNV2, Encore/Popeyes production call, and SeedVegas Startup Showcase IN PERSON at 6pm. AI for Founders reminder with prep docs fired at 10am. Email triage ran 3x (7am: 23 emails, 12pm: 9 emails, 3:50pm: 18 emails -- all passes reached inbox zero). Lead Monitor surfaced: Valerie Kalemba asking Jay to confirm health plan selection (renewal July 1 deadline); Daniel Hayden at Acrisure flagged a $5M COI gap (JET umbrella only covers $3M); Robert Pusateri at Capstone Benefits asking Jay for a yes/no on renewal transition. Lee Teva / Silver Social Games confirmed $50K budget for October VIP event with 25 attendees. NY Sales Tax ST-100 due by June 20 (quarterly) flagged for tomorrow.",
+    "topics": [
+      "JET Business",
+      "Automation",
+      "Email Triage",
+      "Cron Jobs",
+      "New Business",
+      "Production Meeting",
+      "Reminders",
+      "Insurance"
+    ],
+    "work_done": [
+      "Morning briefing ran at 7:04am: 6-meeting calendar surfaced, NY Sales Tax ST-100 due by June 20 flagged",
+      "Email triage 7am: 23 emails processed, inbox to zero; Insurity (ITC Vegas signage) and Encore (backdrop Anaheim) active",
+      "Email triage 12pm: 9 emails processed, inbox to zero; Northbeam conference, Edge Factory/Webflow, Distilbook, DEMA Show",
+      "Email triage 3:50pm: 18 emails processed, inbox to zero; umbrella insurance options, hold harmless/COI, Gray Oaks, Shop SOPs, ADP pre-tax medical, team escape room assignments",
+      "AI for Founders reminder fired at 10am with prep docs (Presentation + System Diagram links)",
+      "Follow-up with Chelsea on Lee Teva lead reminder fired at 2pm",
+      "Send Fyez FAQs reminder fired at 12:15pm (ProtoGroup FAQ content for jettheagency.com)",
+      "Armory last call reminder fired (3 of 3)",
+      "Lee Teva / Silver Social Games: budget confirmed $50K excluding flights; 25 attendees, October Las Vegas, Fri-Sun; Chelsea owning proposal; competing proposals on tight timeline",
+      "Lead Monitor: Valerie Kalemba (WestPac) -- health plan meeting recap requesting Jay confirm selection detail; renewal July 1",
+      "Lead Monitor: Valerie Kalemba (WestPac) -- forwarded SHL/Guardian renewal selection form for Jay to sign; July 1 deadline",
+      "Lead Monitor: Sam Lathos (Wolters Kluwer) -- asking Jay if he wants an account review set up with Nick Chiaramonte",
+      "Lead Monitor: Daniel Hayden (Acrisure) -- hold harmless agreement requires $5M GL/auto coverage; JET umbrella only $3M occurrence/$4M aggregate; COI issuance blocked",
+      "Lead Monitor: Robert Pusateri (Capstone Brokerage) -- yes/no needed on whether Cecilia should contact Jason for Navigator benefits transition; July 1 deadline",
+      "TNTAP auto-forward ran",
+      "Plaud auto-file checked -- no production meeting today, exited silently"
+    ],
+    "key_decisions": [
+      "Lee Teva / Silver Social Games: $50K budget confirmed for October Las Vegas VIP event; Chelsea to build proposal immediately given competing bids",
+      "JET umbrella insurance gap identified: $5M required by hold harmless agreement; JET only has $3M -- upgrade authorization needed from Jay",
+      "Employee benefits renewal deadline July 1, 2026: Jay action needed on plan selection (Valerie Kalemba/WestPac) and Capstone Navigator transition (Robert Pusateri)"
+    ],
+    "open_items": [
+      "JET umbrella insurance gap: hold harmless requires $5M GL/auto; JET only has $3M occurrence/$4M aggregate; COI blocked -- review Daniel Hayden's umbrella upgrade options",
+      "Health plan renewal July 1: Jay must sign SHL/Guardian selection form (Valerie Kalemba/WestPac) and reply on Navigator transition (Robert Pusateri/Capstone)",
+      "NY Sales Tax ST-100: due June 20 (quarterly); Cati flagged on calendar for June 12",
+      "Lee Teva / Silver Social Games: $50K budget confirmed; Chelsea to complete proposal ASAP (competing bids, tight timeline)",
+      "Sam Lathos / Wolters Kluwer: Jay to reply yes/no on account review with Nick Chiaramonte",
+      "Magic Garden Agency refund: Jay to revisit today (June 12)",
+      "ProtoGroup (jettheagency.com): FAQ content still needed from Jay to unblock Fyez build",
+      "IPMI PowerFlex payment: Annie Gala on-site June 13, event June 14-15; still unresolved",
+      "World of Concrete 2027: Reading Truck 30x40 booth; planning kickoff still needed",
+      "JET LLC insurance renewal: Acrisure quotes pending (all 4 policies expired June 3)",
+      "Akur8 contract countersignature: AdobeSign still outstanding",
+      "QB invoice cleanup: 7 items still pending",
+      "Form 5500 ADP compliance: due July 14",
+      "deepseek model ID fix still needed: Client Email Watch, PO Approval Watch, Sent Email Observer",
+      "Monday.com webhook still broken",
+      "NV Sales Tax $5,121.68: reminder June 17",
+      "V-Carve / Bo lock-in: reminder June 17",
+      "LVCVA listing follow-up auto-check: scheduled June 12",
+      "Edward Jones Financial Wellness: launch call requested"
+    ]
   }
 ]
