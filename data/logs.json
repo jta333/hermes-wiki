@@ -424,5 +424,72 @@
       "LVCVA listing follow-up auto-check: scheduled June 12",
       "Edward Jones Financial Wellness: launch call requested"
     ]
+  },
+  {
+    "date": "2026-06-12",
+    "title": "QB AI Expense Account, Headroom Eval & Multiple Reminders",
+    "summary": "Active session day with Jay engaging via Google Chat. Jay decided to create a new AI Platforms expense account in QuickBooks; Hermes drafted an email to Cati with a bulleted list of AI platform names (OpenRouter, Anthropic, Nous, Netlify, Firecrawl, and others). Jay added rule: Netlify subject label is always AI. Email writing rule updated: never open employee emails with 'Hi [Name]' -- use just the name or launch directly into content. Citi card insurance Lead Monitor surfaced Mark Gascoine (Bodaq/vinyl wrapping) and Daniel Hayden (Acrisure insurance) as researched contacts. USMNT vs Paraguay reminders fired at 6am, 2pm, and 5pm (match at 6pm PT). Jay evaluated the headroom GitHub repo for token savings and asked Hermes to install VS Build Tools as a dependency. Install hit errors (exit code 1) but ultimately succeeded. Jay asked about HOA insurance and Jay's Pluma email; reminders set for June 13 (HOA insurance follow-up) and Monday June 15 (schedule Chelsea chat re Wolf and White Lodging, call Mark at CT Corp). Dr. Kermani appointment added June 24 at 2:45pm with Google Calendar event and reminder set. Multiple skill updates fired via background review after session.",
+    "topics": [
+      "JET Business",
+      "Automation",
+      "Email Triage",
+      "Cron Jobs",
+      "New Business",
+      "Reminders",
+      "Tech Setup",
+      "Cost Management",
+      "QuickBooks"
+    ],
+    "work_done": [
+      "7am email triage: ran and completed (inbox zero)",
+      "7am morning briefing: delivered to Google Chat",
+      "USMNT: USA vs Paraguay reminders fired 12h, 4h, and 1h before match start",
+      "LVCVA Listing Follow-Up Check cron ran at 9am",
+      "Reminder: Follow up with Daniel (JET and homeowners insurance) fired at 9am",
+      "Armory reminders 2 and 3 of 3 fired at 1pm and 2:30pm",
+      "12pm email triage: ran and completed",
+      "3:50pm email triage: ran and completed",
+      "Jay decided to create QB expense account 'AI Platforms' for all AI tools (OpenRouter, Anthropic, Nous, Netlify, Firecrawl, Modal, etc.)",
+      "Hermes drafted email to Cati Avina: QB account setup instructions with bulleted AI platform list",
+      "Email writing rule added: for emails to JET employees (Cati, Chelsea, Jenna, Alan, Alexa, Aleksandra), never open with 'Hi [Name]' -- use name alone or skip greeting entirely",
+      "Netlify subject label canonized as always 'AI' (not vendor-specific)",
+      "Lead Monitor fired 3x with content: Mark Gascoine (Bodaq) and Daniel Hayden (Acrisure) researched",
+      "Jay evaluated headroom repo (github.com/chopratejas/headroom) for token cost savings; Hermes reviewed codebase and provided assessment",
+      "VS Build Tools install attempted and completed on Homedrums (needed for headroom/node-gyp dependencies)",
+      "HOA insurance follow-up reminder set for June 13",
+      "Monday reminder set (June 15): schedule chat with Chelsea about Wolf and White Lodging",
+      "Monday reminder set (June 15): call Mark at CT Corp",
+      "Dr. Kermani appointment: June 24 at 2:45pm; Google Calendar event created, reminder set",
+      "Background skill review fired after session: skill library updates applied"
+    ],
+    "key_decisions": [
+      "New QB expense account: 'AI Platforms' -- all AI/SaaS tool charges categorized here going forward",
+      "Employee email rule: never open with 'Hi [Name]'; go straight to name or content (Jay's natural style)",
+      "Netlify label always 'AI' -- no separate vendor label",
+      "VS Build Tools installed on Homedrums (confirmed exit code 0 on final pass) for future headroom/node builds"
+    ],
+    "open_items": [
+      "HOA insurance: Jay to review/follow up June 13 (reminder set)",
+      "Pluma email to Jude Barry: Jay asked when it was sent (June 8); outcome/reply unknown",
+      "Wolf and White Lodging: Monday reminder to schedule Chelsea chat about it",
+      "Mark at CT Corp: Monday reminder to call",
+      "Dr. Kermani appointment June 24 2:45pm: on calendar",
+      "IPMI PowerFlex: Annie Gala on-site June 13, event June 14-15; payment still unresolved",
+      "NY Sales Tax ST-100: due June 20 (quarterly)",
+      "JET umbrella insurance gap: $5M required, JET has $3M; COI blocked",
+      "Health plan renewal July 1: Jay must sign SHL/Guardian form and reply to Capstone",
+      "Magic Garden Agency refund: accounting recommends CC refund; still pending Jay decision",
+      "ProtoGroup (jettheagency.com): FAQ content still needed from Jay",
+      "World of Concrete 2027: Reading Truck 30x40 booth; planning kickoff still needed",
+      "JET LLC insurance renewal: Acrisure quotes pending",
+      "Akur8 contract countersignature: AdobeSign still outstanding",
+      "QB invoice cleanup: 7 items still pending",
+      "Form 5500 ADP compliance: due July 14",
+      "NV Sales Tax $5,121.68: reminder June 17 (Cati/Nevada DOR refund amendment)",
+      "V-Carve / Bo lock-in: reminder June 17",
+      "deepseek model ID fix still needed: Client Email Watch, PO Approval Watch, Sent Email Observer",
+      "Monday.com webhook still broken",
+      "Edward Jones Financial Wellness: launch call requested"
+    ]
   }
 ]
