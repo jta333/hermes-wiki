@@ -500,5 +500,44 @@
       "deepseek model ID fix still needed",
       "Monday.com webhook still broken"
     ]
+  },
+  {
+    "date": "2026-06-14",
+    "title": "Sunday Cron-Only: IPMI Day 1, TNTAP Chronic Failure & Lead Monitor Silent",
+    "summary": "Sunday cron-only day (no active Jay session). IPMI Parking and Mobility Expo Day 1 started with Annie Gala on-site; PowerFlex payment status unknown at close of day. Lead Monitor ran 40+ times throughout the day -- all SILENT (no qualifying emails on Sunday). TNTAP auto-forward cron failed for second consecutive day (terminal tool not available in cron session). Production Meeting Prep cron fired at 7am (Sunday schedule 0 7 * * 0), correctly deferred: confirmed Weekly Production Meeting is Monday June 15 at 1:30pm PT. Weekly new-thread reminder delivered at 6pm PT.",
+    "topics": [
+      "JET Business",
+      "Automation",
+      "Cron Jobs"
+    ],
+    "work_done": [
+      "Lead Monitor (0d20d75bf7f0) ran every 30 min all day -- all SILENT, no qualifying emails on Sunday",
+      "TNTAP auto-forward cron (f1a293a76ece) failed: terminal tool not available in cron session; second consecutive day failure",
+      "Production Meeting Prep cron (a9352a7a80b2) fired at 7am, correctly identified Weekly Production Meeting is Monday June 15 at 1:30pm PT; went SILENT",
+      "Weekly 'start new Hermes thread' reminder (ffcc9f4f1ab6) delivered at 6pm PT",
+      "Wiki daily update cron (cc3cd60d075e) ran at 1am, committed June 13 entry to GitHub repo (push succeeded)"
+    ],
+    "key_decisions": [],
+    "open_items": [
+      "TNTAP auto-forward cron: CHRONIC FAILURE -- terminal tool unavailable for 2+ consecutive days; requires hermes setup tools fix",
+      "IPMI PowerFlex payment: event started June 14 with Annie Gala on-site; payment status unknown at end of day",
+      "NY Sales Tax ST-100: due June 20 (quarterly)",
+      "NV Sales Tax $5,121.68: reminder June 17",
+      "V-Carve / Bo lock-in: reminder June 17",
+      "JET umbrella insurance gap: $5M required by hold harmless, JET has $3M; COI blocked",
+      "Health plan renewal July 1: Jay must sign SHL/Guardian form and reply to Capstone on Navigator transition",
+      "ADP Tax Notices x3: KK10497V1, KK10527V1, KK10542V1 still unresolved",
+      "World of Concrete 2027: Reading Truck 30x40 booth; planning kickoff still needed",
+      "JET LLC insurance renewal: Acrisure quotes pending (all 4 policies expired June 3)",
+      "Akur8 contract countersignature: AdobeSign still outstanding",
+      "QB invoice cleanup: 7 items still pending",
+      "Form 5500 ADP compliance: due July 14",
+      "deepseek model ID fix still needed: Client Email Watch, PO Approval Watch, Sent Email Observer",
+      "Monday.com webhook still broken",
+      "Caroline Quinn / Trustpilot: no response since June 3; call +1 (201) 302-2711",
+      "Desert IT Solutions (Robert Sullivan): reply to ticket 318575 on phishing training recommendation",
+      "ProtoGroup (jettheagency.com): FAQ content still needed from Jay",
+      "Edward Jones Financial Wellness: launch call requested"
+    ]
   }
 ]
