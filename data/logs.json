@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-08-06",
+    "title": "Hermes Profile Crossover: Root Cause and the Great Wall Repair",
+    "summary": "Diagnosed why HermesJr kept acting on the JET work Gmail account. Nothing was switching profiles: the personal profile home is nested inside the work profile home, and the 2026-08-04 'permanent fix' replaced token resolution with a resolver that picks the most recently modified token on disk. The work profile refreshes its token many times a day and the personal profile once or twice, so the work credential was almost always the newest file and was selected on purpose every run. Wrote and unit-tested a pinned-identity repair kit; not yet applied to Homedrums.",
+    "topics": [
+      "Tech Setup",
+      "Automation",
+      "Email Triage",
+      "Security",
+      "Windows"
+    ],
+    "work_done": [
+      "Traced the crossover to three stacked defects: nested profile homes, token paths derived from the inherited HERMES_HOME, and a freshest-token-wins resolver plus a re-auth dual-write added on 2026-08-04",
+      "Established that the standalone account guard cannot detect this, since it verifies one token file by explicit path while the API layer resolves another",
+      "Wrote hermes_identity.py: pinned per-profile token paths, no fallback, no mtime heuristic, containment checks rejecting nested homes and foreign credential paths, and an identity assertion on the same client object about to be used",
+      "Wrote 11 unit tests, all passing, two of which reproduce the August failure and prove it is blocked",
+      "Wrote great-wall.ps1, a staged operator script for Homedrums: audit, pin, denest, separate, verify, rollback, backing up before every change and deleting nothing",
+      "Recorded the failure family in the troubleshooting runbook and the hermes-doctor agent",
+      "Opened a draft PR against jet-claude-central"
+    ],
+    "key_decisions": [
+      "Pin, never search: one profile, one absolute token path from a manifest, missing token is a hard failure rather than a reason to look elsewhere",
+      "Identity is asserted on the live client immediately before use, not by a separate guard script that runs earlier",
+      "Profile homes must be siblings, never parent and child",
+      "The pin stage reports the defective lines in google_api.py and setup.py rather than editing code blind, because a bad patch means a gateway that will not boot and prints no traceback",
+      "Retire the account-guard step from the triage cron prompt: it passed during every incident and produced false confidence"
+    ],
+    "open_items": [
+      "Run great-wall.ps1 -Stage audit on Homedrums to confirm the diagnosis against the live source",
+      "Replace token resolution in google_api.py and setup.py by hand once the audit output is in",
+      "Point cron jobs e47d92b4a313, 0ad98a71c1e6 and e29fc25c8dd3 at an explicit profile instead of an inherited one",
+      "Run -Stage separate to move HermesJr to its own Windows account, the only step that makes the wall OS-enforced",
+      "Confirm or restore the three promotional emails trashed on j@jet.events on 2026-08-02, recoverable until roughly 2026-09-01"
+    ]
+  },
+  {
     "date": "2026-06-01",
     "title": "Full Hermes Stack Build-Out",
     "summary": "Launched Hermes from scratch: connected Google Chat via Pub/Sub, built email archive/triage automation, and set up the memory wiki with cron jobs. Afternoon sessions tackled cost control (switched Opus to Sonnet after $25 burned, set $50 cap), attempted Microsoft 365 install (hit C2R errors, ran registry resets), and hardened Homedrums with never-sleep settings and auto-login so the PC survives power loss without blocking the gateway.",
