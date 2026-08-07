@@ -1,13 +1,15 @@
 # Systems Index
 
-> See also: [[30-Systems/Cron-Jobs]], [[30-Systems/Hermes-Config]], [[30-Systems/Devices]]
+> See also: [[30-Systems/Cron-Jobs]], [[30-Systems/Hermes-Config]], [[30-Systems/Devices]], [[30-Systems/Hermes-Profile-Isolation]]
 
 ---
 
 ## Hermes Agent
 
 - **Host machine:** Homedrums (Windows 10, Las Vegas)
-- **Profile:** default
+- **Profiles:** two. `default` (work, `j@jet.events`, Google Chat) and `personal`
+  (HermesJr, `jaycastellano@gmail.com`, Telegram). Both run as the Windows user `Jay`.
+  Credential isolation between them is broken and under repair: [[30-Systems/Hermes-Profile-Isolation]]
 - **Gateway:** Google Chat via Pub/Sub, runs as Windows Scheduled Task "Hermes_Gateway"
 - **Auto-start:** S4U logon, starts at logon and boot, survives logged-off sessions
 - **Default model:** claude-sonnet-4.6 via OpenRouter (Jay's INFERENCE key)
@@ -62,8 +64,11 @@
 
 | File | Path |
 |------|------|
-| Hermes home | `C:\Users\Jay\AppData\Local\hermes\` |
-| Google OAuth token | `C:\Users\Jay\AppData\Local\hermes\google_token.json` |
+| Hermes home (work) | `C:\Users\Jay\AppData\Local\hermes\` |
+| Hermes home (personal) | `C:\Users\Jay\AppData\Local\hermes\profiles\personal\` (nested inside work, being de-nested) |
+| Google OAuth token (work) | `C:\Users\Jay\AppData\Local\hermes\google_token.json` |
+| Google OAuth token (personal) | `C:\Users\Jay\AppData\Local\hermes\profiles\personal\google_token.json` |
+| Profile isolation repair kit | `jet-claude-central/scripts/homedrums/great-wall/` |
 | Email triage script | `C:\Users\Jay\AppData\Local\hermes\scripts\inbox_triage.py` |
 | Triage fix script | `C:\Users\Jay\AppData\Local\hermes\scripts\triage_fix.py` |
 | Plaud auto-file script | `C:\Users\Jay\plaud_transcript_handler.py` |
