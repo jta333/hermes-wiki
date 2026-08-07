@@ -2,7 +2,9 @@
 
 > See also: [[30-Systems/Systems-Index]], [[30-Systems/Cron-Jobs]], [[50-Operations/Email-Triage-Rules]]
 
-Status: diagnosed and repair written 2026-08-06. **Not yet applied to Homedrums.**
+Status: **APPLIED AND VERIFIED on Homedrums 2026-08-07.** `-Stage verify` reports MATCH on both
+profiles: work reaches `j@jet.events`, personal reaches `jaycastellano@gmail.com`. The crossover is
+closed. What remains is the OS-level wall, tracked as loop L154 in the brain repo.
 
 ---
 
@@ -90,16 +92,32 @@ Every stage backs up to `<name>.bak-greatwall-<timestamp>` and deletes nothing.
 
 ---
 
+## What the live run corrected
+
+- **The dual-write was never in `setup.py`.** The AST patcher found no token mirroring there. The
+  overwrite came from `google_api.py` writing the refreshed credential back to whatever the
+  resolver returned, so the personal profile resolved to the work token file and wrote personal
+  credentials into it. Do not go looking for a file copy.
+- **The live resolver listed the work token by absolute path** as one of its candidates, so
+  de-nesting alone would never have fixed this.
+- **By repair time the leak had already run in reverse.** Both token files were byte-identical and
+  authenticated as the personal account, so the work Hermes was live on the personal mailbox. No
+  work cron fired in that window, so no writes landed. Recovery was a work re-auth, not a restore.
+
+---
+
 ## Still open
 
-- The audit has not been run on Homedrums. It prints the live token resolver and both token
-  timestamps, which confirms the diagnosis against the real source.
-- `google_api.py` and `setup.py` still need their token resolution replaced by hand. The
-  `pin` stage locates and prints the exact lines rather than editing code blind.
+- **The OS-level wall.** Both gateways still run as the Windows user `Jay`, so NTFS cannot separate
+  them and the isolation is enforced by Hermes' own code. `-Stage separate` cannot complete until
+  the personal profile stops storing its state inside the work tree: `hermes_cli --profile personal`
+  resolves its own state from the root home regardless of `HERMES_PROFILE_HOME`. Tracked as loop
+  L154 in `jet-claude-central`.
+- **Do not delete `C:\Users\Jay\AppData\Local\hermes\profiles` yet.** It holds the live personal
+  state and is locked.
 - Cron jobs `e47d92b4a313` (Personal Inbox: Daily Triage), `0ad98a71c1e6` (Insurance Inbox
-  Monitor) and `e29fc25c8dd3` (Triage Health Watchdog) must set the profile explicitly
-  instead of inheriting it. Retire the account-guard step from the triage prompt; it cannot
-  work and it produces false confidence.
+  Monitor) and `e29fc25c8dd3` (Triage Health Watchdog): retire the account-guard step from the
+  triage prompt. It cannot work and it produces false confidence.
 - Three promotional emails trashed on `j@jet.events` on 2026-08-02 (two Sur La Table, one
   Instacart). Recoverable from Trash until roughly 2026-09-01.
 

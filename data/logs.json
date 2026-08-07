@@ -1,5 +1,36 @@
 [
   {
+    "date": "2026-08-07",
+    "title": "Hermes Profile Crossover: Repair Applied and Verified on Homedrums",
+    "summary": "Applied the pinned-credential repair to Homedrums and verified it. Both profiles now reach their own account: work j@jet.events, personal jaycastellano@gmail.com. The live run also corrected the diagnosis: the token overwrite came from google_api.py writing the refreshed credential back to whatever the resolver returned, not from a copy in setup.py, and by repair time the leak had already run in reverse with the work Hermes live on the personal mailbox.",
+    "topics": [
+      "Tech Setup",
+      "Automation",
+      "Security",
+      "Windows",
+      "Email Triage"
+    ],
+    "work_done": [
+      "Ran -Stage all on Homedrums: audit, pin, denest, restart, verify",
+      "Re-authorized the work profile via the google-workspace skill after the guard correctly refused the personal credential",
+      "Confirmed -Stage verify MATCH on both profiles",
+      "Fixed three defects the live run exposed: a Select-String .Count failure under StrictMode, a noisy keyword search replaced by the AST patcher dry run, and the patcher walking backup trees",
+      "Made the pin stage install hermes_identity.py next to each patched google_api.py, which the first run needed by hand",
+      "Recorded the corrected mechanism in the troubleshooting runbook and a new standing rule in the brain repo"
+    ],
+    "key_decisions": [
+      "Enforcement stays in software until the personal profile stops storing its state inside the work tree; -Stage separate cannot complete before that",
+      "The old profiles directory stays in place: it holds the live personal state and is locked",
+      "Do not chase a file copy in setup.py; the overwrite was the OAuth refresh writing back to a resolved path"
+    ],
+    "open_items": [
+      "Consolidate the personal profile into a top-level Hermes home, updating the watchdog's --profile personal detection in the same change",
+      "Then run -Stage separate and re-register the personal gateway under its own Windows account",
+      "Only then remove C:\\Users\\Jay\\AppData\\Local\\hermes\\profiles",
+      "Review and merge jet-claude-central PR 570 and hermes-wiki PR 2"
+    ]
+  },
+  {
     "date": "2026-08-06",
     "title": "Hermes Profile Crossover: Root Cause and the Great Wall Repair",
     "summary": "Diagnosed why HermesJr kept acting on the JET work Gmail account. Nothing was switching profiles: the personal profile home is nested inside the work profile home, and the 2026-08-04 'permanent fix' replaced token resolution with a resolver that picks the most recently modified token on disk. The work profile refreshes its token many times a day and the personal profile once or twice, so the work credential was almost always the newest file and was selected on purpose every run. Wrote and unit-tested a pinned-identity repair kit; not yet applied to Homedrums.",
